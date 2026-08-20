@@ -80,8 +80,10 @@ async function providerJson(response, label) {
 
 async function verifyGeneration(provider, generationId, requestedModel, timeoutMs) {
   const url = `${provider.baseUrl}/generation?id=${encodeURIComponent(generationId)}`;
+  const maxAttempts = Math.max(1, Math.min(20, Number(process.env.OPENROUTER_METADATA_ATTEMPTS ?? 12) || 12));
+  const retryDelayMs = Math.max(50, Math.min(5000, Number(process.env.OPENROUTER_METADATA_DELAY_MS ?? 2500) || 2500));
   let lastError;
-  for (let attempt = 0; attempt < 6; attempt++) {
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
     try {
       const body = await providerJson(await fetchWithTimeout(url, { headers: headers(provider) }, timeoutMs), provider.label);
       const data = body?.data;
@@ -95,7 +97,7 @@ async function verifyGeneration(provider, generationId, requestedModel, timeoutM
       };
     } catch (error) {
       lastError = error;
-      if (attempt < 5) await new Promise(resolve => setTimeout(resolve, 500 * (attempt + 1)));
+      if (attempt < maxAttempts - 1) await new Promise(resolve => setTimeout(resolve, retryDelayMs));
     }
   }
   throw new PlannerError("AI_PROVIDER_ERROR", `OpenRouter generation metadata verification failed: ${lastError instanceof Error ? lastError.message : String(lastError)}`);

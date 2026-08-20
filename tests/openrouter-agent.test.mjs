@@ -17,12 +17,21 @@ const rawPlan = {
 };
 
 function withOpenRouterEnv(run) {
-  const before = { key: process.env.OPENROUTER_API_KEY, model: process.env.OPENROUTER_MODEL };
+  const before = {
+    key: process.env.OPENROUTER_API_KEY,
+    model: process.env.OPENROUTER_MODEL,
+    metadataAttempts: process.env.OPENROUTER_METADATA_ATTEMPTS,
+    metadataDelayMs: process.env.OPENROUTER_METADATA_DELAY_MS,
+  };
   process.env.OPENROUTER_API_KEY = "test-key";
   process.env.OPENROUTER_MODEL = "openai/gpt-5";
+  process.env.OPENROUTER_METADATA_ATTEMPTS = "2";
+  process.env.OPENROUTER_METADATA_DELAY_MS = "50";
   return Promise.resolve(run()).finally(() => {
     if (before.key === undefined) delete process.env.OPENROUTER_API_KEY; else process.env.OPENROUTER_API_KEY = before.key;
     if (before.model === undefined) delete process.env.OPENROUTER_MODEL; else process.env.OPENROUTER_MODEL = before.model;
+    if (before.metadataAttempts === undefined) delete process.env.OPENROUTER_METADATA_ATTEMPTS; else process.env.OPENROUTER_METADATA_ATTEMPTS = before.metadataAttempts;
+    if (before.metadataDelayMs === undefined) delete process.env.OPENROUTER_METADATA_DELAY_MS; else process.env.OPENROUTER_METADATA_DELAY_MS = before.metadataDelayMs;
   });
 }
 
@@ -83,6 +92,6 @@ test("OpenRouter planning fails closed when generation metadata cannot be verifi
       () => planWithOpenRouter({ mandate: demoMandate, portfolio: demoPortfolio, market: demoMarket, objective: demoMandate.objective, timeoutMs: 1000 }),
       error => error?.code === "AI_PROVIDER_ERROR" && /metadata verification failed/.test(error.message),
     );
-    assert.equal(calls, 7);
+    assert.equal(calls, 3);
   } finally { globalThis.fetch = previousFetch; }
 }));
