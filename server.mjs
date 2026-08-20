@@ -17,6 +17,7 @@ import { evaluateAllocation } from "./dist/competition/rwa/evaluate.js";
 import { createApproval, verifyApprovalFreshness, ApprovalRegistry, mandateHash, assetStateHash, portfolioStateHash } from "./dist/competition/rwa/approvals.js";
 import { createDecisionReceipt, verifyReceipt } from "./dist/competition/rwa/receipt.js";
 import { acmeAsset, fundAlphaMandate, alphaPortfolio, allocation } from "./dist/competition/rwa/scenario.js";
+import { handleHttpRequest as handleMcpHttpRequest } from "./packages/mcp/src/transports/http.mjs";
 
 const rwaRegistry = new ApprovalRegistry();
 const rwaReceipts = new Map();
@@ -31,6 +32,13 @@ const judgeReceipts = [];
 const runs = new Map();
 let okxCache = null;
 const activityFile = new URL("./.data/activity.jsonl", import.meta.url);
+const committedProofArtifact = await readFile(new URL("./deployments/live-openrouter-proof.json", import.meta.url), "utf8")
+  .then(value => JSON.parse(value))
+  .catch(() => null);
+const committedTrace = committedProofArtifact?.trace
+  ? { ...committedProofArtifact.trace, proofVerification: committedProofArtifact.trace.proofVerification ?? committedProofArtifact.verification }
+  : null;
+const committedJudgeReceipt = committedProofArtifact?.receipt ?? committedTrace?.judgeReceipt ?? null;
 
 function appendActivity(entry) {
   return import("node:fs/promises").then(async ({ mkdir, appendFile }) => {
@@ -86,16 +94,20 @@ function generatePlanFor(mode, objective, run){
 
 const server=http.createServer(async(req,res)=>{try{
   const url=new URL(req.url??"/",`http://${req.headers.host??"localhost"}`);
+  if(url.pathname==="/mcp"||url.pathname==="/mcp/health") return handleMcpHttpRequest(req,res,{path:"/mcp",healthPaths:["/mcp/health"]});
   if(url.pathname==="/api/health") return sendJson(res,200,{ok:true,product:"CIRCUIT",version:"0.7-mandate-runtime"});
   if(url.pathname==="/api/status"){
     const chain=await xlayerStatus();
     const config=await deploymentConfig();
     const aiInfo=aiProviderInfo();
-    let mcp = { url: `http://127.0.0.1:${Number(process.env.CIRCUIT_MCP_PORT ?? 4185)}`, healthy: false, agents: {} };
-    try {
-      const mcpHealth = await fetch(`${mcp.url}/health`, { signal: AbortSignal.timeout(2000) });
-      mcp.healthy = mcpHealth.ok;
-    } catch {}
+    const deployedMcp = process.env.VERCEL === "1";
+    let mcp = { url: deployedMcp ? `${url.origin}/mcp` : `http://127.0.0.1:${Number(process.env.CIRCUIT_MCP_PORT ?? 4185)}/mcp`, healthy: deployedMcp, transport: "streamable-http", tools: 8, agents: {} };
+    if (!deployedMcp) {
+      try {
+        const mcpHealth = await fetch(`http://127.0.0.1:${Number(process.env.CIRCUIT_MCP_PORT ?? 4185)}/health`, { signal: AbortSignal.timeout(2000) });
+        mcp.healthy = mcpHealth.ok;
+      } catch {}
+    }
     try { mcp.agents.codex = { status: (await readFile("./deployments/traces/codex-mcp-registered.txt", "utf8")).includes("circuit") ? "MCP_REGISTERED" : "UNKNOWN", note: "Agent run blocked by ChatGPT account usage limit (external); MCP registration verified." }; } catch { mcp.agents.codex = { status: "UNCONFIGURED" }; }
     try { const claudeInit = JSON.parse(await readFile("./deployments/traces/claude-mcp-init.json", "utf8")); mcp.agents.claude = { status: claudeInit.tools?.length >= 8 ? "MCP_CONNECTED" : "UNKNOWN", note: "Session init discovered all 8 circuit tools; full run blocked by expired claude.ai OAuth (external)." }; } catch { mcp.agents.claude = { status: "UNCONFIGURED" }; }
     return sendJson(res,200,{ai:{configured:aiInfo.configured,provider:aiInfo.label??"OpenAI Responses API",model:aiInfo.model,timeoutMs:aiTimeoutMs,maxReplans},okx:{configured:okxConfigured(),provider:"OKX Onchain OS",baseUrl:OKX_BASE_URL,state:okxCache?.state??(okxConfigured()?"UNAVAILABLE":"MISCONFIGURED"),stateDetail:okxCache?null:"not yet checked",lastFetchedAt:okxCache?.fetchedAt?new Date(okxCache.fetchedAt).toISOString():null,paymentRequired:Boolean(okxCache?.paymentRequired),endpoints:{indexPrice:"POST /api/v6/dex/index/current-price",rwaTokens:"GET /api/v6/dex/market/rwa/tokens",dexQuote:"GET /api/v6/dex/aggregator/quote"}},mcp,xlayer:{...chain,testnet:XLAYER_TESTNET,deployment:{registry:config.registry,guard:config.guard}}});
@@ -403,16 +415,19 @@ const server=http.createServer(async(req,res)=>{try{
     }catch{}
     return sendJson(res,200,{entries:entries.reverse()});
   }
-  if(url.pathname==="/api/receipts") return sendJson(res,200,{receipts,judgeReceipts,proofVerifications:traces.filter(trace=>trace.proofVerification).map(trace=>({traceId:trace.id,...trace.proofVerification}))});
+  if(url.pathname==="/api/receipts") {
+    const runtimeProofs=traces.filter(trace=>trace.proofVerification).map(trace=>({traceId:trace.id,...trace.proofVerification}));
+    return sendJson(res,200,{receipts,judgeReceipts:judgeReceipts.length?judgeReceipts:(committedJudgeReceipt?[committedJudgeReceipt]:[]),proofVerifications:runtimeProofs.length?runtimeProofs:(committedTrace?.proofVerification?[{traceId:committedTrace.id,...committedTrace.proofVerification}]:[])});
+  }
   if(url.pathname==="/api/receipts/export"){
-    const receipt = judgeReceipts.at(-1);
+    const receipt = judgeReceipts.at(-1)??committedJudgeReceipt;
     if(!receipt) return sendJson(res,404,{error:"No judge receipt yet. Run the proof first."});
-    const trace = traces.find(item=>item.judgeReceipt?.id===receipt.id)??null;
+    const trace = traces.find(item=>item.judgeReceipt?.id===receipt.id)??(committedJudgeReceipt?.id===receipt.id?committedTrace:null);
     const body = JSON.stringify({artifactVersion:"circuit-judge-proof-v1",exportedAt:new Date().toISOString(),receipt,verification:trace?.proofVerification??null,trace}, null, 2);
     res.writeHead(200,{"content-type":"application/json; charset=utf-8","content-disposition":`attachment; filename="${receipt.id}.json"`,"cache-control":"no-store"});
     return res.end(body);
   }
-  if(url.pathname==="/api/trace") return sendJson(res,200,{trace:traces.at(-1)??null});
+  if(url.pathname==="/api/trace") return sendJson(res,200,{trace:traces.at(-1)??committedTrace});
   if(url.pathname==="/api/session/reset"&&req.method==="POST"){receipts.splice(0,receipts.length);traces.splice(0,traces.length);judgeReceipts.splice(0,judgeReceipts.length);runs.clear();activePortfolio=structuredClone(demoPortfolio);return sendJson(res,200,{ok:true,portfolio:activePortfolio});}
   if(url.pathname==="/api/proof/network"){
     const chain = await xlayerStatus();
@@ -441,7 +456,7 @@ const server=http.createServer(async(req,res)=>{try{
       live: verification.live,
     });
   }
-  if(url.pathname==="/api/proof") return sendJson(res,200,{chainId:1952,registry:deployment.registry,guard:deployment.guard,receipts,lastTrace:traces.at(-1)??null,portfolio:activePortfolio,proofStatus:deployment.guard?"deployment-configured":"deployment-pending"});
+  if(url.pathname==="/api/proof") return sendJson(res,200,{chainId:1952,registry:deployment.registry,guard:deployment.guard,receipts,lastTrace:traces.at(-1)??committedTrace,portfolio:activePortfolio,proofStatus:deployment.guard?"deployment-configured":"deployment-pending"});
 
   let path=url.pathname==="/"?"/index.html":url.pathname; path=normalize(path).replace(/^(\.\.(\/|\\|$))+/,'');
   if(!extname(path)) path = `${path}.html`;
