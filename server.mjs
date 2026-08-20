@@ -101,7 +101,9 @@ const server=http.createServer(async(req,res)=>{try{
     const config=await deploymentConfig();
     const aiInfo=aiProviderInfo();
     const deployedMcp = process.env.VERCEL === "1";
-    let mcp = { url: deployedMcp ? `${url.origin}/mcp` : `http://127.0.0.1:${Number(process.env.CIRCUIT_MCP_PORT ?? 4185)}/mcp`, healthy: deployedMcp, transport: "streamable-http", tools: 8, agents: {} };
+    const forwardedProtocol = String(req.headers["x-forwarded-proto"] ?? "http").split(",")[0].trim();
+    const publicOrigin = `${forwardedProtocol}://${req.headers.host ?? "localhost"}`;
+    let mcp = { url: deployedMcp ? `${publicOrigin}/mcp` : `http://127.0.0.1:${Number(process.env.CIRCUIT_MCP_PORT ?? 4185)}/mcp`, healthy: deployedMcp, transport: "streamable-http", tools: 8, agents: {} };
     if (!deployedMcp) {
       try {
         const mcpHealth = await fetch(`http://127.0.0.1:${Number(process.env.CIRCUIT_MCP_PORT ?? 4185)}/health`, { signal: AbortSignal.timeout(2000) });
