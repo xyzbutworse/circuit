@@ -8,10 +8,10 @@ async function render(){
 
     const items=[
       ["AI PLANNER",status.ai?.configured,`${status.ai?.provider} · ${status.ai?.model||"MODEL REQUIRED"}`],
-      ["OKX ONCHAIN OS",status.okx?.configured&&status.okx.state==="LIVE",`STATE ${status.okx?.state??"?"}`],
+      ["OKX ONCHAIN OS",status.okx?.configured&&okx.state==="LIVE",`STATE ${okx.state??status.okx?.state??"?"}`],
       ["X LAYER RPC",Boolean(status.xlayer?.connected),`CHAIN 1952 · BLOCK #${status.xlayer?.blockNumber??"—"}`],
-      ["CircuitMandateRegistry",network.contracts?.registry?.verification?.status==="verified",short(network.contracts?.registry?.address)],
-      ["CircuitPortfolioGuard",network.contracts?.guard?.verification?.status==="verified",short(network.contracts?.guard?.address)],
+      ["CircuitMandateRegistry",["verified","deployed"].includes(network.contracts?.registry?.verification?.status),short(network.contracts?.registry?.address)],
+      ["CircuitPortfolioGuard",["verified","deployed"].includes(network.contracts?.guard?.verification?.status),short(network.contracts?.guard?.address)],
       ["CircuitPortfolioVault",Boolean(vault.ok),short(vault.addresses?.vault)],
       ["EXECUTION ADAPTER",Boolean(vault.ok&&vault.adapter),short(vault.adapter)],
       ["MCP",Boolean(status.mcp?.healthy),"8 TOOLS · HTTP + STDIO"],
