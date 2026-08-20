@@ -1,0 +1,165 @@
+{
+  "receiptVersion": 1,
+  "decisionId": "ACME-STALE-1787191346062",
+  "timestamp": "2026-08-20T02:02:26.062Z",
+  "chainId": 1952,
+  "fundId": "portfolio-alpha-01",
+  "mandateId": "fund-alpha-v1",
+  "mandateVersion": 1,
+  "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+  "assetId": "ACME-INV-8842",
+  "assetStateHash": "sha256:f551476cf9a10e2b2a6ee397d3f5d3520484fd7faa36dba4e08d8d9ec1db35dd",
+  "portfolioStateHash": "0xb591dd4446a03ffa0a4a3259a19ad59657eaff6fa02c0f95f9d0ead4b216d8d2",
+  "allocationId": "ALLOC-35000-fund-alpha",
+  "allocationAmountUsd": 35000,
+  "projected": {
+    "postTradeDebtorExposurePct": 19.1,
+    "postTradeIssuerExposurePct": 19.1,
+    "postTradeSectorExposurePct": 19.1,
+    "postTradeJurisdictionExposurePct": 19.1,
+    "postTradePortfolioExposurePct": 19.1,
+    "allocationUsd": 35000
+  },
+  "ruleEvaluations": [
+    {
+      "ruleId": "verifiedEvidence",
+      "passed": true,
+      "observed": {
+        "verified": true
+      }
+    },
+    {
+      "ruleId": "rejectDisputed",
+      "passed": true,
+      "observed": {
+        "disputed": false
+      }
+    },
+    {
+      "ruleId": "rejectEncumbered",
+      "passed": true,
+      "observed": {
+        "encumbered": false
+      }
+    },
+    {
+      "ruleId": "excludedJurisdictions",
+      "passed": true,
+      "observed": {
+        "jurisdiction": "US-DE"
+      }
+    },
+    {
+      "ruleId": "excludedAssetStates",
+      "passed": true,
+      "observed": {
+        "excludedAssetStates": []
+      }
+    },
+    {
+      "ruleId": "maxSingleAllocation",
+      "passed": true,
+      "observed": {
+        "amountUsd": 35000,
+        "maxUsd": 100000
+      }
+    },
+    {
+      "ruleId": "minYield",
+      "passed": true,
+      "observed": {
+        "yieldPct": 11.2,
+        "minYieldPct": 8
+      }
+    },
+    {
+      "ruleId": "maxMaturity",
+      "passed": true,
+      "observed": {
+        "maturityDays": 74,
+        "maxMaturityDays": 90
+      }
+    },
+    {
+      "ruleId": "minLiquidity",
+      "passed": true,
+      "observed": {
+        "liquidityScore": 85,
+        "minLiquidityScore": null
+      }
+    },
+    {
+      "ruleId": "maxRisk",
+      "passed": true,
+      "observed": {
+        "riskScore": 4,
+        "maxRiskScore": null
+      }
+    },
+    {
+      "ruleId": "maxEvidenceAge",
+      "passed": true,
+      "observed": {
+        "evidenceAgeHours": 2.04,
+        "maxEvidenceAgeHours": 24
+      }
+    },
+    {
+      "ruleId": "minCollateralization",
+      "passed": true,
+      "observed": {
+        "collateralizationRatio": 1.32,
+        "minCollateralizationRatio": null
+      }
+    },
+    {
+      "ruleId": "maxDebtorConcentration",
+      "passed": true,
+      "observed": {
+        "currentDebtorExposurePct": 14.1,
+        "postTradeDebtorExposurePct": 19.1,
+        "mandateMaxPct": 20
+      }
+    },
+    {
+      "ruleId": "maxIssuerConcentration",
+      "passed": true,
+      "observed": {
+        "postTradeIssuerExposurePct": 19.1,
+        "mandateMaxPct": 100
+      }
+    },
+    {
+      "ruleId": "maxSectorConcentration",
+      "passed": true,
+      "observed": {
+        "postTradeSectorExposurePct": 19.1,
+        "mandateMaxPct": 100
+      }
+    },
+    {
+      "ruleId": "maxJurisdictionExposure",
+      "passed": true,
+      "observed": {
+        "postTradeJurisdictionExposurePct": 19.1,
+        "mandateMaxPct": 100
+      }
+    },
+    {
+      "ruleId": "maxPortfolioExposure",
+      "passed": true,
+      "observed": {
+        "postTradePortfolioExposurePct": 19.1,
+        "mandateMaxPct": 95
+      }
+    }
+  ],
+  "reasonCodes": [],
+  "decision": "ALLOW",
+  "approvalId": "AP-fund-alpha-1787191332978",
+  "approvalExpiry": 1787191632978,
+  "txHash": null,
+  "executionResult": "REFUSED — EconomicStateChanged",
+  "previousReceiptHash": null,
+  "receiptHash": "sha256:8de3162cf48f160c8809b3bae20aa5c76ad0ce12ebf9dfff5e1510e861aa7e13"
+}

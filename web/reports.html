@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Reports — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="reports">
+  <!-- THESIS: Reports are inspectable evidence objects, not dashboard cards. OWN-WORLD: Chalk documents, charcoal report rails, signal states, and disciplined metadata. STORY: Select a report, inspect its live record, export or print the evidence. FIRST VIEWPORT: Title and seven-report index expose the full evidence set without hiding content. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Reports</h1><p>Seven inspectable records generated from current CIRCUIT state.</p></div></div>
+    <nav class="report-nav" id="report-nav">
+      <a href="#portfolio"><span class="rid">CR / 01</span><b>PORTFOLIO REPORT</b><span class="st">LIVE</span><span class="meta">Current holdings · exposures · state hash</span><span class="go">VIEW REPORT →</span></a>
+      <a href="#mandate"><span class="rid">CR / 02</span><b>MANDATE COMPLIANCE REPORT</b><span class="st">LIVE</span><span class="meta">Rule-by-rule current vs limit</span><span class="go">VIEW REPORT →</span></a>
+      <a href="#decision"><span class="rid">CR / 03</span><b>DECISION REPORT</b><span class="st">BLOCKED</span><span class="meta">Rejected action · repair envelope</span><span class="go">VIEW REPORT →</span></a>
+      <a href="#execution"><span class="rid">CR / 04</span><b>EXECUTION REPORT</b><span class="st">CONFIRMED</span><span class="meta">Authorized actions · X Layer tx · receipt</span><span class="go">VIEW REPORT →</span></a>
+      <a href="#trace"><span class="rid">CR / 05</span><b>AGENT TRACE REPORT</b><span class="st">LIVE</span><span class="meta">Objective → plan → rejection → replan → approval</span><span class="go">VIEW REPORT →</span></a>
+      <a href="#audit"><span class="rid">CR / 06</span><b>AUDIT REPORT</b><span class="st">LIVE</span><span class="meta">Linked receipt chain</span><span class="go">VIEW REPORT →</span></a>
+      <a href="#provenance"><span class="rid">CR / 07</span><b>PROVIDER / PROVENANCE REPORT</b><span class="st">LIVE</span><span class="meta">AI · OKX · X Layer · MCP · agents</span><span class="go">VIEW REPORT →</span></a>
+    </nav>
+    <div id="reports-root"></div>
+  </main>
+  <script type="module" src="/js/reports.js"></script>
+</body>
+</html>

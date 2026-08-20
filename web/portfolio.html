@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Portfolio — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="portfolio">
+  <!-- THESIS: Portfolio state is a control surface, not a collection of metric cards. OWN-WORLD: Chalk, charcoal, signal red, hard rules, and precise state labels. STORY: Read capital, verify identity, inspect exposure, then act. FIRST VIEWPORT: Title, live status, actions, and four capital measures form one operating band. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Portfolio / ALPHA-01</h1><p>Live capital, positions, and mandate headroom from the guarded portfolio.</p></div><span class="chip" id="portfolio-status-chip">CHECKING</span></div>
+    <div class="page-actions"><a class="btn primary" href="/agent">RUN AGENT</a><a class="btn" href="/reports#portfolio">PORTFOLIO REPORT</a></div>
+    <div id="portfolio-alert" class="alert" hidden></div>
+
+    <section class="statline">
+      <div class="stat"><b id="p-nav">—</b><span>NET ASSET VALUE</span></div>
+      <div class="stat"><b id="p-cash">—</b><span>AVAILABLE CAPITAL</span></div>
+      <div class="stat"><b id="p-invested">—</b><span>INVESTED</span></div>
+      <div class="stat"><b id="p-turnover">—</b><span>DAILY TURNOVER</span></div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>IDENTITY&nbsp;</span><span class="muted">&nbsp;ONCHAIN / GUARD READS</span></div>
+      <dl class="kv kv-straight">
+        <dt>OWNER WALLET&nbsp;</dt><dd id="p-owner">—</dd>
+        <dt>NETWORK&nbsp;</dt><dd id="p-network">—</dd>
+        <dt>CIRCUIT VAULT&nbsp;</dt><dd id="p-vault">—</dd>
+        <dt>MANDATE&nbsp;</dt><dd id="p-mandate">—</dd>
+        <dt>STATUS&nbsp;</dt><dd id="p-status">—</dd>
+        <dt>FUNDED&nbsp;</dt><dd id="p-funded">—</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>PORTFOLIO STATE</span><span class="muted">VERSION <span id="p-version">—</span></span></div>
+      <div class="rows"><div class="row"><span>STATE HASH</span><b><code id="p-statehash">—</code></b><span class="muted">binding current positions · cash · turnover</span></div></div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>POSITIONS / INVENTORY&nbsp;</span><span class="muted">&nbsp;USD NOTIONAL · % NAV</span></div>
+      <div id="p-positions" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>EXPOSURE vs MANDATE LIMITS&nbsp;</span><span class="muted">&nbsp;LIMIT MARKERS IN PLACE</span></div>
+      <div id="p-exposure" class="rows">—</div>
+    </section>
+
+    <p class="page-note">All values are read live from the CircuitPortfolioGuard on X Layer Testnet. Fixture data is never presented as live data.</p>
+
+    <section class="market-view" id="market-view">
+      <div class="section-label"><span>INSTRUMENT MARKET&nbsp;</span><span class="muted">&nbsp;MARKET DATA · OKX ONCHAIN OS</span></div>
+      <div class="market-tabs" id="market-tabs" role="group" aria-label="Asset"></div>
+      <div class="market-ranges" id="market-ranges" role="group" aria-label="Range"></div>
+      <div id="market-body" class="rows">—</div>
+    </section>
+  </main>
+  <script type="module" src="/js/portfolio.js"></script>
+</body>
+</html>

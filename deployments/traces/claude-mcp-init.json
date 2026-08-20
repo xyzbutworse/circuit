@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-08-15T02:34:51.915Z",
+  "note": "Claude Code session init listing Circuit MCP tools",
+  "tools": [
+    "mcp__circuit__circuit_evaluate_action",
+    "mcp__circuit__circuit_execute_authorized_action",
+    "mcp__circuit__circuit_explain_violation",
+    "mcp__circuit__circuit_get_mandate",
+    "mcp__circuit__circuit_get_portfolio",
+    "mcp__circuit__circuit_get_receipt",
+    "mcp__circuit__circuit_project_action",
+    "mcp__circuit__circuit_request_authorization"
+  ]
+}

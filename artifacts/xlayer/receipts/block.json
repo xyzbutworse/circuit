@@ -1,0 +1,167 @@
+{
+  "receiptVersion": 1,
+  "decisionId": "ACME-BLOCK-1787191318859",
+  "timestamp": "2026-08-20T02:01:58.859Z",
+  "chainId": 1952,
+  "fundId": "portfolio-alpha-01",
+  "mandateId": "fund-alpha-v1",
+  "mandateVersion": 1,
+  "mandateHash": "onchain:0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+  "assetId": "ACME-INV-8842",
+  "assetStateHash": "sha256:720547a0998afcc6f9d51a4527e4f01a4a58bde03424afa63f62887950809cf7",
+  "portfolioStateHash": "0x720547a0998afcc6f9d51a4527e4f01a4a58bde03424afa63f62887950809cf7",
+  "allocationId": "ALLOC-100000-fund-alpha",
+  "allocationAmountUsd": 100000,
+  "projected": {
+    "postTradeDebtorExposurePct": 28.4,
+    "postTradeIssuerExposurePct": 28.4,
+    "postTradeSectorExposurePct": 28.4,
+    "postTradeJurisdictionExposurePct": 28.4,
+    "postTradePortfolioExposurePct": 28.4,
+    "allocationUsd": 100000
+  },
+  "ruleEvaluations": [
+    {
+      "ruleId": "verifiedEvidence",
+      "passed": true,
+      "observed": {
+        "verified": true
+      }
+    },
+    {
+      "ruleId": "rejectDisputed",
+      "passed": true,
+      "observed": {
+        "disputed": false
+      }
+    },
+    {
+      "ruleId": "rejectEncumbered",
+      "passed": true,
+      "observed": {
+        "encumbered": false
+      }
+    },
+    {
+      "ruleId": "excludedJurisdictions",
+      "passed": true,
+      "observed": {
+        "jurisdiction": "US-DE"
+      }
+    },
+    {
+      "ruleId": "excludedAssetStates",
+      "passed": true,
+      "observed": {
+        "excludedAssetStates": []
+      }
+    },
+    {
+      "ruleId": "maxSingleAllocation",
+      "passed": true,
+      "observed": {
+        "amountUsd": 100000,
+        "maxUsd": 100000
+      }
+    },
+    {
+      "ruleId": "minYield",
+      "passed": true,
+      "observed": {
+        "yieldPct": 11.2,
+        "minYieldPct": 8
+      }
+    },
+    {
+      "ruleId": "maxMaturity",
+      "passed": true,
+      "observed": {
+        "maturityDays": 74,
+        "maxMaturityDays": 90
+      }
+    },
+    {
+      "ruleId": "minLiquidity",
+      "passed": true,
+      "observed": {
+        "liquidityScore": 85,
+        "minLiquidityScore": null
+      }
+    },
+    {
+      "ruleId": "maxRisk",
+      "passed": true,
+      "observed": {
+        "riskScore": 4,
+        "maxRiskScore": null
+      }
+    },
+    {
+      "ruleId": "maxEvidenceAge",
+      "passed": true,
+      "observed": {
+        "evidenceAgeHours": 2.03,
+        "maxEvidenceAgeHours": 24
+      }
+    },
+    {
+      "ruleId": "minCollateralization",
+      "passed": true,
+      "observed": {
+        "collateralizationRatio": 1.32,
+        "minCollateralizationRatio": null
+      }
+    },
+    {
+      "ruleId": "maxDebtorConcentration",
+      "passed": false,
+      "observed": {
+        "currentDebtorExposurePct": 14.1,
+        "postTradeDebtorExposurePct": 28.4,
+        "mandateMaxPct": 20
+      }
+    },
+    {
+      "ruleId": "maxIssuerConcentration",
+      "passed": true,
+      "observed": {
+        "postTradeIssuerExposurePct": 28.4,
+        "mandateMaxPct": 100
+      }
+    },
+    {
+      "ruleId": "maxSectorConcentration",
+      "passed": true,
+      "observed": {
+        "postTradeSectorExposurePct": 28.4,
+        "mandateMaxPct": 100
+      }
+    },
+    {
+      "ruleId": "maxJurisdictionExposure",
+      "passed": true,
+      "observed": {
+        "postTradeJurisdictionExposurePct": 28.4,
+        "mandateMaxPct": 100
+      }
+    },
+    {
+      "ruleId": "maxPortfolioExposure",
+      "passed": true,
+      "observed": {
+        "postTradePortfolioExposurePct": 28.4,
+        "mandateMaxPct": 95
+      }
+    }
+  ],
+  "reasonCodes": [
+    "DEBTOR_CONCENTRATION_LIMIT"
+  ],
+  "decision": "BLOCK",
+  "approvalId": null,
+  "approvalExpiry": null,
+  "txHash": null,
+  "executionResult": "REFUSED — no valid approval; on-chain gate reverts",
+  "previousReceiptHash": null,
+  "receiptHash": "sha256:381402d13602f6b94a8475aafeb520a9f101cc74ff4e346ad00b1031e8b2958f"
+}

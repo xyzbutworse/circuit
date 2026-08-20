@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Gate — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="gate">
+  <!-- THESIS: The same verified asset produces different decisions at different allocation sizes. OWN-WORLD: Chalk asset record, charcoal evaluation bands, red BLOCK, green ALLOW, and linked receipts. STORY: Verify the asset, compare both allocations, then inspect the decision evidence. FIRST VIEWPORT: Gate title, live state, scenario truth, and verified asset identity. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Mandate Gate / RWA</h1><p>A verified asset still has to fit the fund, amount, and current state.</p></div><span class="chip" id="gate-status-chip">CHECKING</span></div>
+    <p class="page-note">The same verified asset stays investable for one fund and invalid for another. The mandate, not the asset, decides. Scenario: ACME-INV-8842 against Fund ALPHA with a 20% issuer maximum.</p>
+
+    <section class="section">
+      <div class="section-label"><span>01&nbsp; THE ASSET&nbsp;</span><span class="muted">&nbsp;INDEPENDENTLY VERIFIED</span></div>
+      <dl class="kv kv-straight">
+        <dt>ASSET ID&nbsp;</dt><dd id="g-asset-id">—</dd>
+        <dt>DEBTOR&nbsp;</dt><dd id="g-debtor">—</dd>
+        <dt>PASSPORT&nbsp;</dt><dd id="g-passport">—</dd>
+        <dt>YIELD&nbsp;</dt><dd id="g-yield">—</dd>
+        <dt>MATURITY&nbsp;</dt><dd id="g-maturity">—</dd>
+        <dt>COLLATERAL&nbsp;</dt><dd id="g-collateral">—</dd>
+        <dt>EVIDENCE&nbsp;</dt><dd id="g-evidence">—</dd>
+        <dt>VERIFICATION&nbsp;</dt><dd id="g-verified">—</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>02&nbsp; PROPOSED ALLOCATION — $100,000&nbsp;</span><span class="muted">&nbsp;EVALUATED</span></div>
+      <div id="g-blocked" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>03&nbsp; REDUCED ALLOCATION — $35,000&nbsp;</span><span class="muted" id="g-allowed-state">&nbsp;EVALUATING EXECUTION</span></div>
+      <div id="g-allowed" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>04&nbsp; DECISION RECEIPTS&nbsp;</span><span class="muted">&nbsp;TAMPER-EVIDENT</span></div>
+      <div id="g-receipts" class="rows">—</div>
+    </section>
+  </main>
+  <script type="module" src="/js/gate.js"></script>
+</body>
+</html>

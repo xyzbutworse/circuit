@@ -1,0 +1,55 @@
+{
+  "capturedAt": "2026-08-15T02:43:43.573Z",
+  "inputs": {
+    "portfolioId": "portfolio-alpha-01",
+    "portfolioStateHash": "0xb591dd4446a03ffa0a4a3259a19ad59657eaff6fa02c0f95f9d0ead4b216d8d2",
+    "mandateVersion": 1,
+    "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+    "actions": [
+      {
+        "asset": "TSLAx",
+        "assetId": "tslax",
+        "side": "BUY",
+        "notionalUsd": 2500,
+        "expectedSlippageBps": 42
+      }
+    ],
+    "actionsHash": "0x687ecf699b3a88a20940cd6ced5ea9e94c244fb5233356f44a6c7f2b745b965d"
+  },
+  "surfaces": {
+    "web-rest": {
+      "decision": "BLOCKED",
+      "violations": [
+        {
+          "code": "ISSUER_CONCENTRATION_EXCEEDED",
+          "projectedBps": 4000,
+          "maximumBps": 3500
+        }
+      ],
+      "evaluationHash": "0x6cbf2a08540dec3900bb01bc297426f38dd9d601c96604b68217cf907f04a099"
+    },
+    "mcp": {
+      "decision": "BLOCKED",
+      "violations": [
+        {
+          "code": "ISSUER_CONCENTRATION_EXCEEDED",
+          "projectedBps": 4000,
+          "maximumBps": 3500
+        }
+      ],
+      "evaluationHash": "0x6cbf2a08540dec3900bb01bc297426f38dd9d601c96604b68217cf907f04a099"
+    },
+    "engine": {
+      "decision": "BLOCKED",
+      "violations": [
+        {
+          "code": "ISSUER_CONCENTRATION_EXCEEDED",
+          "projectedBps": 4000,
+          "maximumBps": 3500
+        }
+      ],
+      "evaluationHash": "0x6cbf2a08540dec3900bb01bc297426f38dd9d601c96604b68217cf907f04a099"
+    }
+  },
+  "parityHolds": true
+}

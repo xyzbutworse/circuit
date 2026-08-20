@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Activity — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="activity">
+  <!-- THESIS: Every decision is a readable event in one evidence ledger. OWN-WORLD: Chalk chronology, charcoal rules, red refusal, green success, and compact hashes. STORY: Filter the record, scan outcomes, then open the supporting proof. FIRST VIEWPORT: Title, purpose, and event filters sit directly above the live ledger. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Activity</h1><p>A chronological ledger of agent decisions, authorizations, and chain results.</p></div></div>
+    <div class="mode-switch" role="group" aria-label="Filter">
+      <button data-filter="ALL" class="active">ALL</button>
+      <button data-filter="BLOCKED">BLOCKED</button>
+      <button data-filter="AUTHORIZED">AUTHORIZED</button>
+      <button data-filter="EXECUTED">EXECUTED</button>
+      <button data-filter="AGENT">AGENT</button>
+      <button data-filter="ONCHAIN">CHAIN</button>
+    </div>
+    <section class="section">
+      <div class="ledger" id="a-ledger">—</div>
+    </section>
+  </main>
+  <script type="module" src="/js/activity.js"></script>
+</body>
+</html>

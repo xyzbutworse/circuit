@@ -1,0 +1,198 @@
+{
+  "capturedAt": "2026-08-15T00:20:25.607Z",
+  "traceId": "trace-1786753181419",
+  "objective": "Deploy up to $4,500 of available cash into tokenized US equities. Favor TSLAx, then diversify across GOOGLx and MSTRx.",
+  "okx": {
+    "state": "LIVE",
+    "fetchedAt": "2026-08-15T00:19:41.419Z",
+    "provider": "OKX",
+    "baseUrl": "https://web3.okx.com",
+    "entries": {
+      "tslax": {
+        "state": "LIVE",
+        "context": {
+          "asset": "TSLAx",
+          "chainId": 1,
+          "quoteTimestamp": 1786751686861,
+          "referenceAgeSeconds": 1495,
+          "provider": "OKX",
+          "rawReferenceId": "index-price:1:0x8ad3c73f833d3f9a523ab01476625f269aeb7cf0",
+          "price": "341.480120000000000000"
+        }
+      },
+      "googlx": {
+        "state": "LIVE",
+        "context": {
+          "asset": "GOOGLx",
+          "chainId": 1,
+          "quoteTimestamp": 1786751686861,
+          "referenceAgeSeconds": 1495,
+          "provider": "OKX",
+          "rawReferenceId": "index-price:1:0xe92f673ca36c5e2efd2de7628f815f84807e803f",
+          "price": "347.285035000000000000"
+        }
+      },
+      "mstrx": {
+        "state": "LIVE",
+        "context": {
+          "asset": "MSTRx",
+          "chainId": 1,
+          "quoteTimestamp": 1786751686861,
+          "referenceAgeSeconds": 1495,
+          "provider": "OKX",
+          "rawReferenceId": "index-price:1:0xae2f842ef90c0d5213259ab82639d5bbf649b08e",
+          "price": "93.155037500000000000"
+        }
+      }
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "plan": "mandate-rwa-alpha-01-plan-01",
+      "provider": "opencode-go",
+      "model": "gpt-5.6-luna",
+      "verdict": "BLOCKED",
+      "violations": [
+        "ISSUER_CONCENTRATION_EXCEEDED"
+      ],
+      "intents": [
+        "BUY TSLAX 2500",
+        "BUY GOOGLX 1500",
+        "BUY MSTRX 500"
+      ]
+    },
+    {
+      "attempt": 2,
+      "plan": "mandate-rwa-alpha-01-plan-02",
+      "provider": "opencode-go",
+      "model": "gpt-5.6-luna",
+      "verdict": "AUTHORIZED",
+      "violations": [],
+      "intents": [
+        "BUY TSLAX 2000",
+        "BUY GOOGLX 2000",
+        "BUY MSTRX 500"
+      ]
+    }
+  ],
+  "onchain": {
+    "status": "ONCHAIN_AUTHORIZED",
+    "ok": true,
+    "chainId": 1952,
+    "policyKey": "0xd9bbe1b93ed847cab56b4ab7ece982d68c7b51835c7cc0493daf706a5589ec4c",
+    "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+    "policyVersion": 1,
+    "registry": "0x4FE654814808d4DeB73D77e30815c2f23b969B9b",
+    "guard": "0x41992657dAd81F89e61A29887b9bdd1F7cE9Ff77",
+    "publisher": "0xB2F3c78c66B50589c7dD8bC2A937994d3F24eE21",
+    "txs": {
+      "mandateTxHash": "0x75b9c860a3a90eb3aa5fa176820be1076ef7cf8da14f0170ac73bd0aa2dd32c1",
+      "mandateBlock": 38294361,
+      "seedTxHash": "0x0943cd4bd0aabe7c7415c41b3a65a7dcf096589c5789ff22038eb219e65bc127",
+      "seedBlock": 38294364
+    },
+    "trades": [
+      {
+        "assetId": "tslax",
+        "side": "BUY",
+        "notionalUsd": 2000,
+        "intentHash": "0xfcbba8b6f88f1c479476e3c49ceb7350d5a3329eb2e360c7e45d41987c833059",
+        "txHash": "0x91fce741bef1d5102d8cef22521660d622bbc3a84c0906f2ebc5ace5b6cd4245",
+        "blockNumber": 38294368,
+        "status": 1,
+        "authorizationHash": "0xb458b379c26adba0cda4ea0a28c97e828d2fc3ee4eae359b0c1e6ed929a29808"
+      },
+      {
+        "assetId": "googlx",
+        "side": "BUY",
+        "notionalUsd": 2000,
+        "intentHash": "0xf2a7ec3f0d7f538652ef123136069d2e609ad1dd51ae313798b47bc0f855efd4",
+        "txHash": "0xfd541e1277f96f5ddfa59d2451e809298290de2aedd7655c911842e90bbff7fc",
+        "blockNumber": 38294372,
+        "status": 1,
+        "authorizationHash": "0xa24af222fb007d319632d51b6625c2f287cd6d88b47466e8aca06a86c7c4ad54"
+      },
+      {
+        "assetId": "mstrx",
+        "side": "BUY",
+        "notionalUsd": 500,
+        "intentHash": "0xf413a758b3631795fee5a48b22a8f9b1cfdec17c7f716e469f7f5871cd9105e9",
+        "txHash": "0xabd12a57cc1a704e1cf818e958f69fa8302aa169337fca641a290ed5d8f81d9b",
+        "blockNumber": 38294375,
+        "status": 1,
+        "authorizationHash": "0x0e3091c70929653e4c024ca912274ffaedd0e16fe96391b83f8ccbe2d5443e25"
+      }
+    ],
+    "readback": {
+      "assetUsd": {
+        "tslax": 3500,
+        "googlx": 3500,
+        "mstrx": 1000
+      },
+      "cashUsd": 2000,
+      "dailyTurnoverUsd": 5000,
+      "totalInvested": 8000
+    }
+  },
+  "judgeReceipt": {
+    "id": "judge-receipt:trace-1786753181419",
+    "chainId": 1952,
+    "createdAt": "2026-08-15T00:20:14.331Z",
+    "objectiveHash": "0x84dd5b941d3b646c56b973a5bd4d8d2bdcb320e7bae0c6b293342c45882fb99e",
+    "plan1Hash": "sha256:10281e3d6ec0ecef2a8b20a2be80ff77209622a5d9f5c50f24481f23b8c96a76",
+    "plan2Hash": "sha256:850720e3d37a6941d4ec7a29b88949598e78b26929fbd2616fa5ecfe8b8fa59f",
+    "rejectionCode": "ISSUER_CONCENTRATION_EXCEEDED",
+    "rejection": {
+      "code": "ISSUER_CONCENTRATION_EXCEEDED",
+      "bucketId": "tesla",
+      "issuer": "Tesla, Inc.",
+      "message": "Tesla, Inc. exposure would become 40.0% of NAV.",
+      "actual": 40,
+      "limit": 35,
+      "projectedExposureBps": 4000,
+      "limitBps": 3500
+    },
+    "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+    "policyVersion": 1,
+    "policyKey": "0xd9bbe1b93ed847cab56b4ab7ece982d68c7b51835c7cc0493daf706a5589ec4c",
+    "intentHash": "0xfcbba8b6f88f1c479476e3c49ceb7350d5a3329eb2e360c7e45d41987c833059",
+    "authorizationHash": "0xb458b379c26adba0cda4ea0a28c97e828d2fc3ee4eae359b0c1e6ed929a29808",
+    "transactionHash": "0x91fce741bef1d5102d8cef22521660d622bbc3a84c0906f2ebc5ace5b6cd4245",
+    "trades": [
+      {
+        "assetId": "tslax",
+        "side": "BUY",
+        "notionalUsd": 2000,
+        "intentHash": "0xfcbba8b6f88f1c479476e3c49ceb7350d5a3329eb2e360c7e45d41987c833059",
+        "txHash": "0x91fce741bef1d5102d8cef22521660d622bbc3a84c0906f2ebc5ace5b6cd4245",
+        "blockNumber": 38294368,
+        "status": 1,
+        "authorizationHash": "0xb458b379c26adba0cda4ea0a28c97e828d2fc3ee4eae359b0c1e6ed929a29808"
+      },
+      {
+        "assetId": "googlx",
+        "side": "BUY",
+        "notionalUsd": 2000,
+        "intentHash": "0xf2a7ec3f0d7f538652ef123136069d2e609ad1dd51ae313798b47bc0f855efd4",
+        "txHash": "0xfd541e1277f96f5ddfa59d2451e809298290de2aedd7655c911842e90bbff7fc",
+        "blockNumber": 38294372,
+        "status": 1,
+        "authorizationHash": "0xa24af222fb007d319632d51b6625c2f287cd6d88b47466e8aca06a86c7c4ad54"
+      },
+      {
+        "assetId": "mstrx",
+        "side": "BUY",
+        "notionalUsd": 500,
+        "intentHash": "0xf413a758b3631795fee5a48b22a8f9b1cfdec17c7f716e469f7f5871cd9105e9",
+        "txHash": "0xabd12a57cc1a704e1cf818e958f69fa8302aa169337fca641a290ed5d8f81d9b",
+        "blockNumber": 38294375,
+        "status": 1,
+        "authorizationHash": "0x0e3091c70929653e4c024ca912274ffaedd0e16fe96391b83f8ccbe2d5443e25"
+      }
+    ],
+    "finalPortfolioHash": "sha256:dcd4b7f8a37f4a5051ebd25025807398be911e1b4cac494c4aeaf9a386f7ac35",
+    "previousReceiptHash": "sha256:5d77fb4a72aba142f643476e2355bbbeaba4ca33d3711c4638119cd71cae241c",
+    "receiptHash": "sha256:cb694f92ac8785bf2356b996cde3dcedb1c238317e158d2d440b51028a9daa2a"
+  }
+}

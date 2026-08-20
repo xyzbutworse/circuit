@@ -1,0 +1,1 @@
+circuit              http://127.0.0.1:4185/mcp          CIRCUIT_MCP_TOKEN     enabled  Bearer token

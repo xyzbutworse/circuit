@@ -1,0 +1,41 @@
+{
+  "kind": "CIRCUIT DEMO RWA ALLOCATION VEHICLE",
+  "note": "Synthetic competition RWA execution vehicle. ACME-INV-8842 is NOT a real-world receivable. Live amounts are X Layer testnet token units, not USD capital.",
+  "network": {
+    "name": "X Layer Testnet",
+    "chainId": 1952,
+    "rpc": "https://testrpc.xlayer.tech/terigon",
+    "explorerBase": "https://www.okx.com/web3/explorer/xlayer-test"
+  },
+  "chainId": 1952,
+  "contractAddress": "0x6d45BeB641132B19A89315110ea22565AcD38A63",
+  "deployer": "0xB2F3c78c66B50589c7dD8bC2A937994d3F24eE21",
+  "executor": "0xB2F3c78c66B50589c7dD8bC2A937994d3F24eE21",
+  "registry": "0x6E8d0a0C740A2Bb1D8D271D02919a0f7c4f8356b",
+  "vault": "0x86d66F4F892bcd91850703f4Ed9F140d1652358A",
+  "fundKey": "0x2323bff6102d7517e0a45f51811f3456a7c9dff0ca674d32e51bf439e7c1437d",
+  "asset": {
+    "assetId": "ACME-INV-8842",
+    "assetKey": "0xa96c88e4d0c10dc24cd139f082b313b062c8bfa5afdd0566c49332b3359c52ca",
+    "passportHash": "0xa0ae341ab6912516fd63e5dee2f64decb045045af90b7ded35f513faedd74b60",
+    "economicStateHash": "0x010ffbff6f4fc34e4febd57545aa2c41fdcdb31ed7177e2e1d7c05a21e1508f1",
+    "engine": "assetStateHash(acmeAsset)",
+    "active": true,
+    "registered": true
+  },
+  "registration": {
+    "asset": {
+      "tx": "0x145068e6414d3b22a46b11f651ff242c1b68d9217ec098ccb525c8197c40b37a",
+      "block": 38722234
+    },
+    "fund": {
+      "tx": "0xa60443304342bb91453c8e6c79635ec36a6ed111927de69adb32e2d3569d5843",
+      "block": 38722243
+    }
+  },
+  "deployTx": {
+    "hash": "0x5a05afc8b5dccbb957839f3d45a9c9a4c3308145224bf7fff24e3a33b3c00d54",
+    "block": 38722221
+  },
+  "generatedAt": "2026-08-19T23:11:23.099Z"
+}

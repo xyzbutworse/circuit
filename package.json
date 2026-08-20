@@ -1,0 +1,37 @@
+{
+  "name": "circuit-mandate-runtime",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "description": "Stateful financial mandate runtime for AI-managed tokenized-asset portfolios on X Layer.",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs packages/mcp/test/*.test.mjs",
+    "test:mcp": "node --test packages/mcp/test/*.test.mjs",
+    "parity": "node --env-file-if-exists=.env scripts/capture-parity.mjs",
+    "dev": "npm run build && node --env-file-if-exists=.env server.mjs",
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "mcp": "node --env-file-if-exists=.env packages/mcp/bin/circuit-mcp.mjs",
+    "mcp:http": "node --env-file-if-exists=.env packages/mcp/bin/circuit-mcp.mjs --http --port 4185",
+    "check": "npm run typecheck && npm test && node --check server.mjs && node --check web/js/shared.js && node --check web/js/wallet-core.mjs && node --check integrations/vault.mjs && node --check packages/mcp/bin/circuit-mcp.mjs && node --check packages/mcp/src/core.mjs && node --check packages/mcp/src/server.mjs && node --check packages/mcp/src/schemas.mjs && node --check packages/mcp/src/auth.mjs && node --check packages/mcp/src/transports/http.mjs && node --check packages/mcp/src/transports/stdio.mjs",
+    "verify": "npm run build && node scripts/circuit.mjs verify",
+    "benchmark": "npm run build && node scripts/circuit.mjs benchmark",
+    "prove:xlayer": "node --env-file-if-exists=.env scripts/prove-xlayer.mjs",
+    "prove:openrouter": "node --env-file-if-exists=.env scripts/prove-openrouter.mjs",
+    "verify:openrouter-proof": "npm run build && node scripts/verify-openrouter-proof.mjs",
+    "render:live": "node scripts/render-live-proof.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@types/node": "^26.2.0",
+    "typescript": "5.8.3"
+  },
+  "dependencies": {
+    "ethers": "^6.17.0"
+  }
+}

@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.26"
+optimizer = true
+optimizer_runs = 200
+evm_version = "cancun"
+via_ir = true
+verbosity = 1
+
+[fuzz]
+runs = 256
+max_test_rejects = 65_536
+
+[fmt]
+line_length = 140
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+quote_style = "double"
+number_underscore = "preserve"
+multiline_func_header = "params_first"
+sort_imports = true

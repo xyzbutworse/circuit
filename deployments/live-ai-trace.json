@@ -1,0 +1,37 @@
+{
+  "capturedAt": "2026-08-14T23:54:42.507Z",
+  "traceId": "trace-1786751635960",
+  "provider": "opencode-go",
+  "model": "gpt-5.6-luna",
+  "summary": [
+    {
+      "attempt": 1,
+      "planId": "rwa-alpha-01-deploy-4500",
+      "provider": "opencode-go",
+      "model": "gpt-5.6-luna",
+      "verdict": "BLOCKED",
+      "violations": [
+        "REFERENCE_STALE",
+        "REFERENCE_STALE",
+        "REFERENCE_STALE",
+        "ISSUER_CONCENTRATION_EXCEEDED"
+      ],
+      "revisionOf": null,
+      "thesis": "Deploys the full permitted $4,500 while favoring TSLAx at approximately 56% of n"
+    },
+    {
+      "attempt": 2,
+      "planId": "rwa-alpha-01-deploy-4500-revision-2",
+      "provider": "opencode-go",
+      "model": "gpt-5.6-luna",
+      "verdict": "BLOCKED",
+      "violations": [
+        "REFERENCE_STALE",
+        "REFERENCE_STALE",
+        "REFERENCE_STALE"
+      ],
+      "revisionOf": "rwa-alpha-01-deploy-4500",
+      "thesis": "Proposes only nominal additions because all three permitted assets have stale re"
+    }
+  ]
+}

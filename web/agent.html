@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Agent — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="agent">
+  <!-- THESIS: The agent works inside a visible authorization sequence, never above the mandate. OWN-WORLD: Chalk operating field, charcoal control bands, signal-red refusal, and green authorization. STORY: Set the objective, watch projection and repair, then execute only an approved plan. FIRST VIEWPORT: Session title, mode, editable objective, and nine-stage execution rail. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Agent / Session</h1><p>Plan, project, reject, repair, and authorize one portfolio action.</p></div><span class="chip" id="agent-mode-chip">CHECKING</span></div>
+
+    <div class="mode-switch" role="group" aria-label="Planner mode">
+      <button data-mode="demo" class="active">DEMO / FIXTURES</button>
+      <button data-mode="live">LIVE / OKX + AI</button>
+    </div>
+
+    <div class="objective-band">
+      <span>OBJECTIVE</span>
+      <textarea id="objective-input" rows="2" spellcheck="false" aria-label="Agent objective">Deploy up to $4,500 of available cash into tokenized US equities. Favor TSLAx, then diversify across GOOGLx and MSTRx.</textarea>
+      <button id="start-agent" class="btn primary small">RUN AGENT</button>
+    </div>
+
+    <div class="stage-rail" id="stage-rail" tabindex="0" aria-label="Agent execution stages">
+      <div data-stage="objective" class="stage active"><b>/01</b><span>OBJECTIVE</span></div>
+      <div data-stage="market" class="stage"><b>/02</b><span>MARKET</span></div>
+      <div data-stage="plan" class="stage"><b>/03</b><span>PLAN</span></div>
+      <div data-stage="projection" class="stage"><b>/04</b><span>PROJECT</span></div>
+      <div data-stage="evaluate" class="stage"><b>/05</b><span>EVALUATE</span></div>
+      <div data-stage="replan" class="stage"><b>/06</b><span>REPLAN</span></div>
+      <div data-stage="authorize" class="stage"><b>/07</b><span>AUTHORIZE</span></div>
+      <div data-stage="execute" class="stage"><b>/08</b><span>EXECUTE</span></div>
+      <div data-stage="receipt" class="stage"><b>/09</b><span>RECEIPT</span></div>
+    </div>
+
+    <section class="section">
+      <div class="section-label"><span>CURRENT&nbsp;</span><span class="muted">&nbsp;PORTFOLIO STATE</span></div>
+      <div id="a-current" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>MARKET CONTEXT</span><span class="muted" id="a-market-src">—</span></div>
+      <div id="a-market" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>AGENT PLAN</span></div>
+      <div id="a-plan" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>PROJECTED FUTURE PORTFOLIO</span></div>
+      <div id="a-projected" class="rows">—</div>
+    </section>
+
+    <section class="section" id="a-verdict" hidden>
+      <div class="section-label"><span>CIRCUIT EVALUATION</span></div>
+      <div id="a-verdict-body"></div>
+    </section>
+
+    <section class="section" id="a-replan" hidden>
+      <div class="section-label"><span>REPLAN — WHAT CHANGED</span></div>
+      <div id="a-replan-body"></div>
+    </section>
+
+    <section class="section" id="a-exec" hidden>
+      <div class="section-label"><span>AUTHORIZATION / EXECUTION</span></div>
+      <div id="a-exec-body"></div>
+      <p><button id="a-execute" class="btn primary" hidden>EXECUTE THROUGH VAULT</button></p>
+    </section>
+
+    <p class="page-note">Demo mode uses clearly labeled fixture market data and a fixture agent. Live mode uses OpenRouter and OKX Onchain OS. Every live plan records a verified generation ID and content hashes. CIRCUIT, not the model, owns the mandate decision.</p>
+  </main>
+  <script type="module" src="/js/agent.js"></script>
+</body>
+</html>

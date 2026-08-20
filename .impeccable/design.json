@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-20T13:05:40Z",
+  "title": "Design System: CIRCUIT",
+  "extensions": {
+    "colorMeta": {
+      "chalk-white": {
+        "role": "neutral",
+        "displayName": "Chalk White",
+        "canonical": "#f7f7f5",
+        "tonalRamp": ["oklch(15% 0.003 106.4)", "oklch(26% 0.003 106.4)", "oklch(38% 0.003 106.4)", "oklch(50% 0.003 106.4)", "oklch(62% 0.003 106.4)", "oklch(74% 0.003 106.4)", "oklch(86% 0.003 106.4)", "oklch(95% 0.003 106.4)"]
+      },
+      "hero-stage": {
+        "role": "neutral",
+        "displayName": "Hero Stage",
+        "canonical": "#f2f2f0",
+        "tonalRamp": ["oklch(15% 0.003 106.4)", "oklch(26% 0.003 106.4)", "oklch(38% 0.003 106.4)", "oklch(50% 0.003 106.4)", "oklch(62% 0.003 106.4)", "oklch(74% 0.003 106.4)", "oklch(86% 0.003 106.4)", "oklch(95% 0.003 106.4)"]
+      },
+      "sequence-field": {
+        "role": "neutral",
+        "displayName": "Sequence Field",
+        "canonical": "#ecece8",
+        "tonalRamp": ["oklch(15% 0.005 106.5)", "oklch(26% 0.005 106.5)", "oklch(38% 0.005 106.5)", "oklch(50% 0.005 106.5)", "oklch(62% 0.005 106.5)", "oklch(74% 0.005 106.5)", "oklch(86% 0.005 106.5)", "oklch(95% 0.005 106.5)"]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#111211",
+        "tonalRamp": ["oklch(15% 0.003 145.5)", "oklch(26% 0.003 145.5)", "oklch(38% 0.003 145.5)", "oklch(50% 0.003 145.5)", "oklch(62% 0.003 145.5)", "oklch(74% 0.003 145.5)", "oklch(86% 0.003 145.5)", "oklch(95% 0.003 145.5)"]
+      },
+      "body-charcoal": {
+        "role": "neutral",
+        "displayName": "Body Charcoal",
+        "canonical": "#353734",
+        "tonalRamp": ["oklch(15% 0.006 134.9)", "oklch(26% 0.006 134.9)", "oklch(38% 0.006 134.9)", "oklch(50% 0.006 134.9)", "oklch(62% 0.006 134.9)", "oklch(74% 0.006 134.9)", "oklch(86% 0.006 134.9)", "oklch(95% 0.006 134.9)"]
+      },
+      "muted-charcoal": {
+        "role": "neutral",
+        "displayName": "Muted Charcoal",
+        "canonical": "#62645f",
+        "tonalRamp": ["oklch(15% 0.008 124.6)", "oklch(26% 0.008 124.6)", "oklch(38% 0.008 124.6)", "oklch(50% 0.008 124.6)", "oklch(62% 0.008 124.6)", "oklch(74% 0.008 124.6)", "oklch(86% 0.008 124.6)", "oklch(95% 0.008 124.6)"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d9dad5",
+        "tonalRamp": ["oklch(15% 0.007 115.7)", "oklch(26% 0.007 115.7)", "oklch(38% 0.007 115.7)", "oklch(50% 0.007 115.7)", "oklch(62% 0.007 115.7)", "oklch(74% 0.007 115.7)", "oklch(86% 0.007 115.7)", "oklch(95% 0.007 115.7)"]
+      },
+      "signal-amber-red": {
+        "role": "primary",
+        "displayName": "Signal Amber-Red",
+        "canonical": "#ee4a24",
+        "tonalRamp": ["oklch(15% 0.207 34.1)", "oklch(26% 0.207 34.1)", "oklch(38% 0.207 34.1)", "oklch(50% 0.207 34.1)", "oklch(62% 0.207 34.1)", "oklch(74% 0.207 34.1)", "oklch(86% 0.207 34.1)", "oklch(95% 0.207 34.1)"]
+      },
+      "signal-amber-red-dark": {
+        "role": "primary",
+        "displayName": "Deep Signal Amber-Red",
+        "canonical": "#bd3015",
+        "tonalRamp": ["oklch(15% 0.182 32.7)", "oklch(26% 0.182 32.7)", "oklch(38% 0.182 32.7)", "oklch(50% 0.182 32.7)", "oklch(62% 0.182 32.7)", "oklch(74% 0.182 32.7)", "oklch(86% 0.182 32.7)", "oklch(95% 0.182 32.7)"]
+      },
+      "allow-green": {
+        "role": "secondary",
+        "displayName": "Allow Green",
+        "canonical": "#2f6f4f",
+        "tonalRamp": ["oklch(15% 0.084 159.2)", "oklch(26% 0.084 159.2)", "oklch(38% 0.084 159.2)", "oklch(50% 0.084 159.2)", "oklch(62% 0.084 159.2)", "oklch(74% 0.084 159.2)", "oklch(86% 0.084 159.2)", "oklch(95% 0.084 159.2)"]
+      },
+      "decision-surface": {
+        "role": "neutral",
+        "displayName": "Decision Surface",
+        "canonical": "#191a18",
+        "tonalRamp": ["oklch(15% 0.004 128.7)", "oklch(26% 0.004 128.7)", "oklch(38% 0.004 128.7)", "oklch(50% 0.004 128.7)", "oklch(62% 0.004 128.7)", "oklch(74% 0.004 128.7)", "oklch(86% 0.004 128.7)", "oklch(95% 0.004 128.7)"]
+      },
+      "decision-rule": {
+        "role": "neutral",
+        "displayName": "Decision Rule",
+        "canonical": "#555751",
+        "tonalRamp": ["oklch(15% 0.010 121.8)", "oklch(26% 0.010 121.8)", "oklch(38% 0.010 121.8)", "oklch(50% 0.010 121.8)", "oklch(62% 0.010 121.8)", "oklch(74% 0.010 121.8)", "oklch(86% 0.010 121.8)", "oklch(95% 0.010 121.8)"]
+      },
+      "decision-row-rule": {
+        "role": "neutral",
+        "displayName": "Decision Row Rule",
+        "canonical": "#3b3d39",
+        "tonalRamp": ["oklch(15% 0.007 128.7)", "oklch(26% 0.007 128.7)", "oklch(38% 0.007 128.7)", "oklch(50% 0.007 128.7)", "oklch(62% 0.007 128.7)", "oklch(74% 0.007 128.7)", "oklch(86% 0.007 128.7)", "oklch(95% 0.007 128.7)"]
+      },
+      "decision-muted": {
+        "role": "neutral",
+        "displayName": "Decision Muted",
+        "canonical": "#8f918b",
+        "tonalRamp": ["oklch(15% 0.009 121.7)", "oklch(26% 0.009 121.7)", "oklch(38% 0.009 121.7)", "oklch(50% 0.009 121.7)", "oklch(62% 0.009 121.7)", "oklch(74% 0.009 121.7)", "oklch(86% 0.009 121.7)", "oklch(95% 0.009 121.7)"]
+      },
+      "decision-copy": {
+        "role": "neutral",
+        "displayName": "Decision Copy",
+        "canonical": "#bfc0bb",
+        "tonalRamp": ["oklch(15% 0.007 115.7)", "oklch(26% 0.007 115.7)", "oklch(38% 0.007 115.7)", "oklch(50% 0.007 115.7)", "oklch(62% 0.007 115.7)", "oklch(74% 0.007 115.7)", "oklch(86% 0.007 115.7)", "oklch(95% 0.007 115.7)"]
+      },
+      "block-bright": {
+        "role": "primary",
+        "displayName": "Bright Block Signal",
+        "canonical": "#ff633f",
+        "tonalRamp": ["oklch(15% 0.197 34.4)", "oklch(26% 0.197 34.4)", "oklch(38% 0.197 34.4)", "oklch(50% 0.197 34.4)", "oklch(62% 0.197 34.4)", "oklch(74% 0.197 34.4)", "oklch(86% 0.197 34.4)", "oklch(95% 0.197 34.4)"]
+      },
+      "allow-bright": {
+        "role": "secondary",
+        "displayName": "Bright Allow Green",
+        "canonical": "#72b58e",
+        "tonalRamp": ["oklch(15% 0.089 157.6)", "oklch(26% 0.089 157.6)", "oklch(38% 0.089 157.6)", "oklch(50% 0.089 157.6)", "oklch(62% 0.089 157.6)", "oklch(74% 0.089 157.6)", "oklch(86% 0.089 157.6)", "oklch(95% 0.089 157.6)"]
+      },
+      "signal-hover": {
+        "role": "primary",
+        "displayName": "Signal Hover",
+        "canonical": "#ff785a",
+        "tonalRamp": ["oklch(15% 0.171 33.9)", "oklch(26% 0.171 33.9)", "oklch(38% 0.171 33.9)", "oklch(50% 0.171 33.9)", "oklch(62% 0.171 33.9)", "oklch(74% 0.171 33.9)", "oklch(86% 0.171 33.9)", "oklch(95% 0.171 33.9)"]
+      },
+      "gate-idle": {
+        "role": "neutral",
+        "displayName": "Gate Idle",
+        "canonical": "#c8c9c4",
+        "tonalRamp": ["oklch(15% 0.007 115.7)", "oklch(26% 0.007 115.7)", "oklch(38% 0.007 115.7)", "oklch(50% 0.007 115.7)", "oklch(62% 0.007 115.7)", "oklch(74% 0.007 115.7)", "oklch(86% 0.007 115.7)", "oklch(95% 0.007 115.7)"]
+      },
+      "sequence-rule": {
+        "role": "neutral",
+        "displayName": "Sequence Rule",
+        "canonical": "#cacbc5",
+        "tonalRamp": ["oklch(15% 0.008 114.2)", "oklch(26% 0.008 114.2)", "oklch(38% 0.008 114.2)", "oklch(50% 0.008 114.2)", "oklch(62% 0.008 114.2)", "oklch(74% 0.008 114.2)", "oklch(86% 0.008 114.2)", "oklch(95% 0.008 114.2)"]
+      },
+      "pure-white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(86% 0 0)", "oklch(95% 0 0)"]
+      },
+      "app-paper": {
+        "role": "neutral", "displayName": "App Paper", "canonical": "#f0f0ec",
+        "tonalRamp": ["oklch(15% 0.005 106.5)", "oklch(26% 0.005 106.5)", "oklch(38% 0.005 106.5)", "oklch(50% 0.005 106.5)", "oklch(62% 0.005 106.5)", "oklch(74% 0.005 106.5)", "oklch(86% 0.005 106.5)", "oklch(95% 0.005 106.5)"]
+      },
+      "app-ink-secondary": {
+        "role": "neutral", "displayName": "App Ink Secondary", "canonical": "#30322f",
+        "tonalRamp": ["oklch(15% 0.006 134.9)", "oklch(26% 0.006 134.9)", "oklch(38% 0.006 134.9)", "oklch(50% 0.006 134.9)", "oklch(62% 0.006 134.9)", "oklch(74% 0.006 134.9)", "oklch(86% 0.006 134.9)", "oklch(95% 0.006 134.9)"]
+      },
+      "app-line": {
+        "role": "neutral", "displayName": "App Line", "canonical": "#d2d3cd",
+        "tonalRamp": ["oklch(15% 0.008 114.2)", "oklch(26% 0.008 114.2)", "oklch(38% 0.008 114.2)", "oklch(50% 0.008 114.2)", "oklch(62% 0.008 114.2)", "oklch(74% 0.008 114.2)", "oklch(86% 0.008 114.2)", "oklch(95% 0.008 114.2)"]
+      },
+      "app-line-dark": {
+        "role": "neutral", "displayName": "App Line Dark", "canonical": "#a8aaa2",
+        "tonalRamp": ["oklch(15% 0.012 118.1)", "oklch(26% 0.012 118.1)", "oklch(38% 0.012 118.1)", "oklch(50% 0.012 118.1)", "oklch(62% 0.012 118.1)", "oklch(74% 0.012 118.1)", "oklch(86% 0.012 118.1)", "oklch(95% 0.012 118.1)"]
+      },
+      "app-signal": {
+        "role": "primary", "displayName": "Operating Signal", "canonical": "#d63c1d",
+        "tonalRamp": ["oklch(15% 0.196 33.0)", "oklch(26% 0.196 33.0)", "oklch(38% 0.196 33.0)", "oklch(50% 0.196 33.0)", "oklch(62% 0.196 33.0)", "oklch(74% 0.196 33.0)", "oklch(86% 0.196 33.0)", "oklch(95% 0.196 33.0)"]
+      },
+      "app-signal-deep": {
+        "role": "primary", "displayName": "Operating Signal Deep", "canonical": "#a92b14",
+        "tonalRamp": ["oklch(15% 0.166 32.5)", "oklch(26% 0.166 32.5)", "oklch(38% 0.166 32.5)", "oklch(50% 0.166 32.5)", "oklch(62% 0.166 32.5)", "oklch(74% 0.166 32.5)", "oklch(86% 0.166 32.5)", "oklch(95% 0.166 32.5)"]
+      },
+      "warning-brown": {
+        "role": "tertiary", "displayName": "Warning Brown", "canonical": "#8f4a17",
+        "tonalRamp": ["oklch(15% 0.111 52.2)", "oklch(26% 0.111 52.2)", "oklch(38% 0.111 52.2)", "oklch(50% 0.111 52.2)", "oklch(62% 0.111 52.2)", "oklch(74% 0.111 52.2)", "oklch(86% 0.111 52.2)", "oklch(95% 0.111 52.2)"]
+      },
+      "rail-muted": {
+        "role": "neutral", "displayName": "Rail Muted", "canonical": "#9fa19a",
+        "tonalRamp": ["oklch(15% 0.010 119.7)", "oklch(26% 0.010 119.7)", "oklch(38% 0.010 119.7)", "oklch(50% 0.010 119.7)", "oklch(62% 0.010 119.7)", "oklch(74% 0.010 119.7)", "oklch(86% 0.010 119.7)", "oklch(95% 0.010 119.7)"]
+      },
+      "rail-signal": {
+        "role": "primary", "displayName": "Rail Signal", "canonical": "#ff5a37",
+        "tonalRamp": ["oklch(15% 0.207 33.6)", "oklch(26% 0.207 33.6)", "oklch(38% 0.207 33.6)", "oklch(50% 0.207 33.6)", "oklch(62% 0.207 33.6)", "oklch(74% 0.207 33.6)", "oklch(86% 0.207 33.6)", "oklch(95% 0.207 33.6)"]
+      },
+      "accessible-meta": {
+        "role": "neutral", "displayName": "Accessible Meta", "canonical": "#66675f",
+        "tonalRamp": ["oklch(15% 0.012 112.6)", "oklch(26% 0.012 112.6)", "oklch(38% 0.012 112.6)", "oklch(50% 0.012 112.6)", "oklch(62% 0.012 112.6)", "oklch(74% 0.012 112.6)", "oklch(86% 0.012 112.6)", "oklch(95% 0.012 112.6)"]
+      },
+      "accessible-index": {
+        "role": "neutral", "displayName": "Accessible Index", "canonical": "#70726b",
+        "tonalRamp": ["oklch(15% 0.011 119.8)", "oklch(26% 0.011 119.8)", "oklch(38% 0.011 119.8)", "oklch(50% 0.011 119.8)", "oklch(62% 0.011 119.8)", "oklch(74% 0.011 119.8)", "oklch(86% 0.011 119.8)", "oklch(95% 0.011 119.8)"]
+      },
+      "accessible-stage": {
+        "role": "neutral", "displayName": "Accessible Stage", "canonical": "#85887f",
+        "tonalRamp": ["oklch(15% 0.014 121.8)", "oklch(26% 0.014 121.8)", "oklch(38% 0.014 121.8)", "oklch(50% 0.014 121.8)", "oklch(62% 0.014 121.8)", "oklch(74% 0.014 121.8)", "oklch(86% 0.014 121.8)", "oklch(95% 0.014 121.8)"]
+      },
+      "alert-paper": {
+        "role": "neutral", "displayName": "Alert Paper", "canonical": "#fff0ec",
+        "tonalRamp": ["oklch(15% 0.017 35.3)", "oklch(26% 0.017 35.3)", "oklch(38% 0.017 35.3)", "oklch(50% 0.017 35.3)", "oklch(62% 0.017 35.3)", "oklch(74% 0.017 35.3)", "oklch(86% 0.017 35.3)", "oklch(95% 0.017 35.3)"]
+      },
+      "violation-line": {
+        "role": "primary", "displayName": "Violation Line", "canonical": "#e2a695",
+        "tonalRamp": ["oklch(15% 0.075 36.4)", "oklch(26% 0.075 36.4)", "oklch(38% 0.075 36.4)", "oklch(50% 0.075 36.4)", "oklch(62% 0.075 36.4)", "oklch(74% 0.075 36.4)", "oklch(86% 0.075 36.4)", "oklch(95% 0.075 36.4)"]
+      },
+      "control-well": {
+        "role": "neutral", "displayName": "Control Well", "canonical": "#dfe0da",
+        "tonalRamp": ["oklch(15% 0.008 114.2)", "oklch(26% 0.008 114.2)", "oklch(38% 0.008 114.2)", "oklch(50% 0.008 114.2)", "oklch(62% 0.008 114.2)", "oklch(74% 0.008 114.2)", "oklch(86% 0.008 114.2)", "oklch(95% 0.008 114.2)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero statement and largest section declarations."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Band titles and large process statements."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Authorization steps and compact display values."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanatory copy over light and dark surfaces."
+      },
+      "label": {
+        "displayName": "Technical Label",
+        "purpose": "Navigation, controls, evidence, and provider metadata."
+      },
+      "micro-label": { "displayName": "Micro Label", "purpose": "Nine-pixel status, stage, table, and report labels." },
+      "navigation-label": { "displayName": "Navigation Label", "purpose": "Ten-pixel navigation, wallet, row, and action labels." },
+      "rail-label": { "displayName": "Rail Label", "purpose": "Eleven-pixel operating section labels." },
+      "record": { "displayName": "Record", "purpose": "Twelve-pixel evidence rows and key-value records." },
+      "supporting": { "displayName": "Supporting", "purpose": "Thirteen-pixel activity and empty-state copy." },
+      "compact-title": { "displayName": "Compact Title", "purpose": "Fourteen-pixel report titles at narrow widths." },
+      "app-body": { "displayName": "App Body", "purpose": "Fifteen-pixel page introductions and agent objectives." },
+      "code": { "displayName": "Code", "purpose": "Ten-pixel hashes, addresses, and machine identifiers." }
+    },
+    "shadows": [
+      {
+        "name": "wallet-menu-ambient",
+        "value": "0 18px 50px rgba(17,18,17,.13)",
+        "purpose": "Only ambient surface shadow, used by the open wallet menu."
+      },
+      {
+        "name": "live-status-ring",
+        "value": "0 0 0 4px rgba(47,111,79,.12)",
+        "purpose": "Status ring around the live proof dot."
+      },
+      {
+        "name": "app-wallet-menu-ambient",
+        "value": "0 20px 60px rgba(17,18,17,.24)",
+        "purpose": "Ambient shadow under the operating-shell wallet menu."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-rise",
+        "value": "200ms ease",
+        "purpose": "Button color, border, and two-pixel hover lift."
+      },
+      {
+        "name": "gate-sequence",
+        "value": "4.8s cubic-bezier(.2,.8,.2,1) infinite",
+        "purpose": "Three gate segments move from idle to ALLOW to BLOCK."
+      },
+      {
+        "name": "gate-stagger",
+        "value": "180ms",
+        "purpose": "Delay between adjacent gate segments."
+      },
+      {
+        "name": "reduced-motion-gate",
+        "value": "none",
+        "purpose": "Static amber-red gate bars when reduced motion is active."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "app-compact",
+        "value": "980px"
+      },
+      {
+        "name": "compact",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "narrow",
+        "value": "430px"
+      }
+    ]
+  },
+  "components": [
+      {
+        "name": "Primary Button",
+        "kind": "button",
+        "refersTo": "button-primary",
+        "description": "Primary amber-red action used to enter CIRCUIT.",
+        "html": "<a class=\"ds-button ds-button-primary\" href=\"#\">ENTER CIRCUIT</a>",
+        "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid #111211;border-radius:2px;font:800 11px/1 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #ee4a24;outline-offset:4px}.ds-button-primary{background:#ee4a24;border-color:#ee4a24;color:#fff}.ds-button-primary:hover{background:#bd3015;border-color:#bd3015}"
+      },
+      {
+        "name": "Secondary Button",
+        "kind": "button",
+        "refersTo": "button-secondary",
+        "description": "Translucent hero action for the proof route.",
+        "html": "<a class=\"ds-button ds-button-secondary\" href=\"#\">INSPECT LIVE PROOF</a>",
+        "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid #111211;border-radius:2px;font:800 11px/1 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #ee4a24;outline-offset:4px}.ds-button-secondary{background:rgba(247,247,245,.64);color:#111211;backdrop-filter:blur(10px)}.ds-button-secondary:hover{background:#111211;color:#fff}"
+      },
+      {
+        "name": "Light Button",
+        "kind": "button",
+        "refersTo": "button-light",
+        "description": "White action used on the deep amber-red proof band.",
+        "html": "<span class=\"ds-proof-surface\"><a class=\"ds-button ds-button-light\" href=\"#\">VIEW PROOF DOSSIER</a></span>",
+        "css": ".ds-proof-surface{display:inline-block;padding:20px;background:#bd3015}.ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid #fff;border-radius:2px;font:800 11px/1 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #ee4a24;outline-offset:4px}.ds-button-light{background:#fff;color:#111211}.ds-button-light:hover{background:transparent;color:#fff}"
+      },
+      {
+        "name": "Hero Proof Badge",
+        "kind": "custom",
+        "refersTo": "proof-badge",
+        "description": "Compact X Layer proof status with live dot and gate sequence.",
+        "html": "<div class=\"ds-proof-badge\"><span class=\"ds-live-dot\"></span><div><b>X Layer Testnet</b><small>BLOCK, ALLOW, and STALE execution proof</small></div><span class=\"ds-gate\"><i></i><i></i><i></i></span></div>",
+        "css": ".ds-proof-badge{display:flex;align-items:flex-start;gap:10px;max-width:260px;padding:12px 14px;background:rgba(247,247,245,.75);border:1px solid rgba(17,18,17,.12);backdrop-filter:blur(14px);color:#111211;font-family:Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif}.ds-proof-badge b,.ds-proof-badge small{display:block}.ds-proof-badge b{font-size:11px;line-height:1.2}.ds-proof-badge small{margin-top:4px;font-size:10px;line-height:1.35;color:#62645f}.ds-live-dot{width:7px;height:7px;margin-top:2px;border-radius:50%;background:#2f6f4f;box-shadow:0 0 0 4px rgba(47,111,79,.12)}.ds-gate{display:flex;align-items:center;gap:3px;margin-left:auto;align-self:stretch}.ds-gate i{display:block;width:3px;height:100%;min-height:24px;background:#c8c9c4;transform-origin:bottom;animation:ds-gate-sequence 4.8s cubic-bezier(.2,.8,.2,1) infinite}.ds-gate i:nth-child(2){animation-delay:.18s}.ds-gate i:nth-child(3){animation-delay:.36s}@keyframes ds-gate-sequence{0%,14%{transform:scaleY(.2);background:#c8c9c4}28%,58%{transform:scaleY(1);background:#2f6f4f}72%,100%{transform:scaleY(1);background:#ee4a24}}@media(prefers-reduced-motion:reduce){.ds-gate i{animation:none;transform:none;background:#ee4a24}}"
+      },
+      {
+        "name": "Provider Rail Cell",
+        "kind": "custom",
+        "refersTo": "provider-cell",
+        "description": "Compact provider label and current status separated by hairlines.",
+        "html": "<div class=\"ds-provider-cell\"><span>/03 X LAYER</span><b>CHECKING</b></div>",
+        "css": ".ds-provider-cell{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px clamp(12px,2vw,30px);border:1px solid #d9dad5;background:#f7f7f5;color:#111211;font-family:Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;font-size:9px;text-transform:uppercase}.ds-provider-cell span{font-weight:800;letter-spacing:.12em;color:#62645f}.ds-provider-cell b{font-weight:700;letter-spacing:.04em;text-align:right}"
+      },
+      {
+        "name": "Navigation Link",
+        "kind": "nav",
+        "refersTo": "navigation-link",
+        "description": "Numbered uppercase route link for the transparent hero rail.",
+        "html": "<a class=\"ds-nav-link\" href=\"#\"><i>/01</i> PORTFOLIO</a>",
+        "css": ".ds-nav-link{display:inline-block;padding-bottom:18px;border-bottom:2px solid transparent;color:rgba(17,18,17,.62);font:700 10px Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.1em;text-decoration:none}.ds-nav-link i{font-style:normal}.ds-nav-link:hover{color:#111211}.ds-nav-link:focus-visible{outline:3px solid #ee4a24;outline-offset:4px}.ds-nav-link[aria-current=page]{color:#111211;border-bottom-color:#111211}"
+      },
+      {
+        "name": "Fixture Chip",
+        "kind": "chip",
+        "refersTo": "fixture-chip",
+        "description": "Provenance label for the synthetic allocation fixture.",
+        "html": "<span class=\"ds-fixture-chip\">SYNTHETIC FIXTURE</span>",
+        "css": ".ds-fixture-chip{display:inline-block;padding:7px 10px;border:1px solid #555751;border-radius:999px;background:transparent;color:#bfc0bb;font:700 9px/1 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}"
+      },
+      {
+        "name": "BLOCK Scenario Row",
+        "kind": "custom",
+        "refersTo": "scenario-row-block",
+        "description": "Rejected allocation row with projected exposure and verdict in signal red.",
+        "html": "<div class=\"ds-scenario ds-scenario-block\"><div><span>Proposal</span><b>$100,000</b></div><div><span>Projected debtor exposure</span><b>28.4%</b></div><div><span>Mandate maximum</span><b>20.0%</b></div><strong>BLOCK</strong></div>",
+        "css": ".ds-scenario{display:grid;grid-template-columns:1fr 1.25fr 1fr auto;gap:22px;align-items:end;padding:34px 0;border-top:1px solid #3b3d39;background:#191a18;color:#fff}.ds-scenario span{display:block;margin-bottom:8px;font:700 9px/1.2 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8f918b}.ds-scenario b{font:600 clamp(26px,3vw,48px)/1 Archivo,Arial Narrow,sans-serif;letter-spacing:-.03em}.ds-scenario strong{min-width:108px;text-align:right;font:800 clamp(20px,2.2vw,34px)/1 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.03em}.ds-scenario-block strong,.ds-scenario-block>div:nth-child(2) b{color:#ff633f}@media(max-width:760px){.ds-scenario{grid-template-columns:1fr 1fr;gap:26px 18px}.ds-scenario strong{text-align:left}}"
+      },
+      {
+        "name": "ALLOW Scenario Row",
+        "kind": "custom",
+        "refersTo": "scenario-row-allow",
+        "description": "Accepted replanned allocation row with projected exposure and verdict in green.",
+        "html": "<div class=\"ds-scenario ds-scenario-allow\"><div><span>Replanned proposal</span><b>$35,000</b></div><div><span>Projected debtor exposure</span><b>19.1%</b></div><div><span>Mandate maximum</span><b>20.0%</b></div><strong>ALLOW</strong></div>",
+        "css": ".ds-scenario{display:grid;grid-template-columns:1fr 1.25fr 1fr auto;gap:22px;align-items:end;padding:34px 0;border-top:1px solid #3b3d39;background:#191a18;color:#fff}.ds-scenario span{display:block;margin-bottom:8px;font:700 9px/1.2 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8f918b}.ds-scenario b{font:600 clamp(26px,3vw,48px)/1 Archivo,Arial Narrow,sans-serif;letter-spacing:-.03em}.ds-scenario strong{min-width:108px;text-align:right;font:800 clamp(20px,2.2vw,34px)/1 Helvetica Neue,Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.03em}.ds-scenario-allow strong,.ds-scenario-allow>div:nth-child(2) b{color:#72b58e}@media(max-width:760px){.ds-scenario{grid-template-columns:1fr 1fr;gap:26px 18px}.ds-scenario strong{text-align:left}}"
+      },
+      {
+        "name": "Three-Segment Gate Signal",
+        "kind": "custom",
+        "refersTo": "gate-signal",
+        "description": "Three timed bars move from idle to ALLOW to BLOCK.",
+        "html": "<span class=\"ds-gate\"><i></i><i></i><i></i></span>",
+        "css": ".ds-gate{display:flex;align-items:center;gap:3px;height:28px}.ds-gate i{display:block;width:3px;height:100%;min-height:24px;background:#c8c9c4;transform-origin:bottom;animation:ds-gate-sequence 4.8s cubic-bezier(.2,.8,.2,1) infinite}.ds-gate i:nth-child(2){animation-delay:.18s}.ds-gate i:nth-child(3){animation-delay:.36s}@keyframes ds-gate-sequence{0%,14%{transform:scaleY(.2);background:#c8c9c4}28%,58%{transform:scaleY(1);background:#2f6f4f}72%,100%{transform:scaleY(1);background:#ee4a24}}@media(prefers-reduced-motion:reduce){.ds-gate i{animation:none;transform:none;background:#ee4a24}}"
+      }
+    ],
+  "narrative": {
+      "northStar": "The Physical Authorization Boundary",
+      "overview": "The CIRCUIT site turns an abstract mandate check into a physical authorization boundary. The landing page expresses this world through bright industrial product photography, large charcoal type, and amber-red proof signals. The operating pages continue the same world as a control-led shell built from chalk canvas, a black sticky rail, ruled evidence records, and explicit state bands.\n\nThe system favors inspectable structure over dashboard decoration. Archivo carries product identity and decisive values. The system sans stack carries navigation, controls, evidence, and dense operating text. Every page keeps live, synthetic, BLOCK, ALLOW, and failure states visually distinct.",
+      "keyCharacteristics": [
+        "Full-width product photography on the landing and a control-led operating shell inside.",
+        "Self-hosted Archivo display type paired with a restrained system sans UI face.",
+        "Chalk canvas, black rails, sparse orange-red signal, and green only for ALLOW or proven state.",
+        "Thin technical rules, squared controls, zero resting card shadows, and compact evidence labels.",
+        "Table-like records expose portfolio state, clauses, decisions, reports, audits, and receipts."
+      ],
+      "rules": [
+        {
+          "name": "The Signal Rarity Rule",
+          "body": "Amber-red identifies action, refusal, or proof. Do not spread the signal color across neutral content.",
+          "section": "colors"
+        },
+        {
+          "name": "The State Color Rule",
+          "body": "Red means BLOCK or action. Green means live or ALLOW. Never swap these meanings.",
+          "section": "colors"
+        },
+        {
+          "name": "The Two-Face Rule",
+          "body": "Use Archivo for display hierarchy. Use the system sans stack for copy, navigation, controls, and evidence labels.",
+          "section": "typography"
+        },
+        {
+          "name": "The Band Rhythm Rule",
+          "body": "Alternate photography, chalk-white space, charcoal decision space, warm gray process space, and the amber-red proof band. Keep each band visually complete.",
+          "section": "layout"
+        },
+        {
+          "name": "The Minimal Lift Rule",
+          "body": "Reserve visible elevation for wallet menus and live-status treatment. Content bands, records, scenario rows, clauses, steps, and provider cells stay flat.",
+          "section": "elevation"
+        },
+        {
+          "name": "The Squared Control Rule",
+          "body": "Interactive controls use a two-pixel radius. Structural containers use square corners.",
+          "section": "shapes"
+        }
+      ],
+      "dos": [
+        "Do carry the same chalk, charcoal, orange signal, green proof, and Archivo identity across landing and operating pages.",
+        "Do use original product imagery as the hero's full-width operating surface.",
+        "Do label synthetic fixtures and testnet proof in visible interface copy.",
+        "Do preserve exact BLOCK and ALLOW color semantics across scenario rows and gate motion.",
+        "Do structure operating evidence as ruled records with tabular numerals and compact labels.",
+        "Do retain the landing 1100px breakpoint and operating 980px, 760px, and 430px transitions."
+      ],
+      "donts": [
+        "Don't add rounded cards, gradient decoration, or broad shadow stacks.",
+        "Don't treat the provider rail as customer-logo proof.",
+        "Don't invent custody, production, customer, or performance claims.",
+        "Don't use green for neutral progress, decoration, or non-proven state.",
+        "Don't replace the sticky black operating rail with generic light dashboard navigation.",
+        "Don't remove the reduced-motion fallback or visible focus outline."
+      ]
+  }
+}

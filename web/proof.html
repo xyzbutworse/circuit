@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Proof — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="proof">
+  <!-- THESIS: Product claims resolve into live checks, addresses, transactions, receipts, and tests. OWN-WORLD: Chalk evidence field, charcoal audit bands, green proof, and red failure. STORY: Verify the system, inspect chain records, then reproduce the claims. FIRST VIEWPORT: Title, proof principle, and runtime system checks establish evidence before detail. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Proof of CIRCUIT</h1><p>Runtime checks, deployed contracts, transactions, receipts, and reproducible artifacts.</p></div></div>
+    <p class="page-note">Every CIRCUIT claim should be independently inspectable. Each LIVE label on this page comes from a runtime check performed now, not a configuration flag.</p>
+
+    <section class="section">
+      <div class="section-label"><span>SYSTEM&nbsp;</span><span>&nbsp;STATE</span></div>
+      <div class="audit-table" id="ps-grid">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>DEPLOYMENTS / X LAYER TESTNET&nbsp;</span><span class="muted">&nbsp;CONTRACT ADDRESSES</span></div>
+      <div id="ps-deployments" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>PROOF TRANSACTIONS&nbsp;</span><span class="muted">&nbsp;EXPLORER LINKS</span></div>
+      <div id="ps-txs" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>LATEST CIRCUIT RECEIPT</span></div>
+      <div id="ps-receipt" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>REPRODUCIBLE ARTIFACTS&nbsp;</span><span class="muted">&nbsp;TESTS</span></div>
+      <div id="ps-tests" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>CRITICAL CLAIMS&nbsp;</span><span class="muted">&nbsp;60-SECOND CHECK</span></div>
+      <div id="ps-claims" class="rows">—</div>
+    </section>
+  </main>
+  <script type="module" src="/js/proof.js"></script>
+</body>
+</html>

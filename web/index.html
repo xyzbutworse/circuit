@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f7f7f5" />
+  <title>CIRCUIT | Mandate-Gated Execution for Autonomous Portfolios</title>
+  <meta name="description" content="CIRCUIT projects the portfolio state an AI action would create, then authorizes only actions inside the active mandate." />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="landing-page">
+  <!--
+    THESIS: CIRCUIT makes the authorization boundary physical and immediate. The page refuses the standard abstract fintech dashboard hero.
+    OWN-WORLD: Chalk-white industrial product photography, charcoal typography, amber-red signal states, squared controls, and thin technical rules.
+    STORY: See the gate, understand the projected-state decision, inspect the proof, then enter the live agent workflow.
+    FIRST VIEWPORT: A full-width mandate console fills the stage. Large left-aligned copy occupies its negative space, with one solid action below.
+    FORM: Bright industrial control surface, first-ranked direction, pinned by the supplied reference. Seed key: user-reference-2026-08-20.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <main class="home">
+    <section class="home-hero" data-console-state="blocked" aria-labelledby="home-title">
+      <img id="home-console-image" class="home-hero-image" src="/assets/circuit-mandate-console.png" alt="A white CIRCUIT mandate console showing a blocked execution state" width="1672" height="941" fetchpriority="high" />
+      <div class="home-hero-copy">
+        <h1 id="home-title">The asset is real.<br><span>The allocation still has to pass.</span></h1>
+        <p class="home-intro">CIRCUIT projects the financial state an AI action would create, then authorizes only the actions inside your mandate on X Layer.</p>
+        <div class="home-actions">
+          <a class="home-button home-button-primary" href="/agent">Enter CIRCUIT</a>
+          <a class="home-button home-button-secondary" href="/proof">Inspect live proof</a>
+        </div>
+      </div>
+      <div class="home-hero-proof" aria-label="Current proof status">
+        <span class="home-live-dot" aria-hidden="true"></span>
+        <div class="home-proof-copy">
+          <b>X Layer Testnet</b>
+          <small id="home-console-live" role="status" aria-live="polite">BLOCKED · mandate violation</small>
+          <div class="home-state-controls" aria-label="Console state slideshow">
+            <button type="button" data-console-state="0" aria-pressed="true">BLOCK</button>
+            <button type="button" data-console-state="1" aria-pressed="false">ALLOW</button>
+            <button type="button" data-console-state="2" aria-pressed="false">STALE</button>
+            <button type="button" class="home-state-toggle" aria-label="Pause console state slideshow">PAUSE</button>
+          </div>
+        </div>
+        <span class="home-gate-signal" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+    </section>
+
+    <section class="home-provider-rail" id="landing-strip" aria-label="Provider status"></section>
+
+    <section class="home-statement">
+      <p>A verified asset still becomes the wrong investment when the proposed allocation breaks the fund mandate.</p>
+      <div class="home-statement-side">
+        <span>CIRCUIT evaluates</span>
+        <b>Asset state<br>Portfolio state<br>Mandate state<br>Proposed amount</b>
+      </div>
+    </section>
+
+    <section class="home-decision" aria-labelledby="decision-title">
+      <div class="home-decision-copy">
+        <h2 id="decision-title">One asset.<br>Two amounts.<br>Different decisions.</h2>
+        <p>ACME-INV-8842 passes verification. Position size decides whether Fund ALPHA stays inside its 20% debtor ceiling.</p>
+        <a class="home-inline-link" href="/gate">Open the mandate gate</a>
+      </div>
+
+      <div class="home-scenario" role="group" aria-label="Synthetic allocation scenario">
+        <div class="home-scenario-head">
+          <div><span>Asset</span><b>ACME-INV-8842</b></div>
+          <span class="home-fixture">Synthetic fixture</span>
+        </div>
+        <div class="home-scenario-row home-scenario-row-block">
+          <div><span>Proposal</span><b>$100,000</b></div>
+          <div><span>Projected debtor exposure</span><b>28.4%</b></div>
+          <div><span>Mandate maximum</span><b>20.0%</b></div>
+          <strong>BLOCK</strong>
+        </div>
+        <div class="home-scenario-row home-scenario-row-allow">
+          <div><span>Replanned proposal</span><b>$35,000</b></div>
+          <div><span>Projected debtor exposure</span><b>19.1%</b></div>
+          <div><span>Mandate maximum</span><b>20.0%</b></div>
+          <strong>ALLOW</strong>
+        </div>
+        <div class="home-scenario-foot">
+          <span>Same verified asset</span>
+          <span>State-bound authorization</span>
+          <span>Capital moved only after ALLOW</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-sequence" aria-labelledby="sequence-title">
+      <div class="home-sequence-title">
+        <h2 id="sequence-title">The authorization path</h2>
+        <p>The AI owns the proposal. CIRCUIT owns the decision boundary and evidence.</p>
+      </div>
+      <ol class="home-steps">
+        <li><span>01</span><b>Propose</b><p>An agent submits a structured portfolio action.</p></li>
+        <li><span>02</span><b>Project</b><p>CIRCUIT computes the exact post-trade portfolio.</p></li>
+        <li><span>03</span><b>Evaluate</b><p>The active mandate returns machine-readable constraints.</p></li>
+        <li><span>04</span><b>Authorize</b><p>A passing action receives a short-lived, state-bound approval.</p></li>
+        <li><span>05</span><b>Execute</b><p>The X Layer gate rechecks state before capital moves.</p></li>
+        <li><span>06</span><b>Prove</b><p>A linked receipt records the decision and chain result.</p></li>
+      </ol>
+    </section>
+
+    <section class="home-proof-band" aria-labelledby="proof-title">
+      <div>
+        <h2 id="proof-title">A stale approval is no approval.</h2>
+        <p>Change the asset, portfolio, mandate, amount, chain, nonce, or expiry and CIRCUIT rejects the authorization.</p>
+      </div>
+      <a class="home-button home-button-light" href="/proof">View proof dossier</a>
+    </section>
+
+    <footer class="home-footer">
+      <a class="home-footer-brand" href="/">CIRCUIT <span>07</span></a>
+      <p>AI proposes. CIRCUIT evaluates. X Layer executes.</p>
+      <div><a href="/agent">Agent</a><a href="/mandate">Mandate</a><a href="/reports">Reports</a><a href="/proof">Proof</a></div>
+    </footer>
+  </main>
+  <script type="module" src="/js/landing.js"></script>
+</body>
+</html>

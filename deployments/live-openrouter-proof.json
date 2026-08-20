@@ -1,0 +1,866 @@
+{
+  "artifactVersion": "circuit-openrouter-proof-v1",
+  "generatedAt": "2026-08-20T17:48:20.768Z",
+  "provider": "OpenRouter",
+  "trace": {
+    "id": "trace-1787248017439",
+    "mode": "live",
+    "objective": "Deploy up to $4,500 of available cash into tokenized US equities. Favor TSLAx, then diversify across GOOGLx and MSTRx.",
+    "availableCapitalUsd": 6500,
+    "mandateId": "mandate-rwa-alpha-01",
+    "portfolioId": "portfolio-agent-01",
+    "startedAt": "2026-08-20T17:46:57.439Z",
+    "endedAt": "2026-08-20T17:48:20.768Z",
+    "maxReplans": 2,
+    "status": "AUTHORIZED",
+    "allowed": true,
+    "verdict": "AUTHORIZED",
+    "market": {
+      "provider": "OKX",
+      "state": "LIVE",
+      "assets": [
+        {
+          "assetId": "tslax",
+          "symbol": "TSLAx",
+          "name": "Tesla xStock",
+          "issuerId": "tesla",
+          "issuerName": "Tesla, Inc.",
+          "sectorId": "automotive",
+          "sectorName": "Automotive",
+          "category": "tokenized-equity",
+          "priceUsd": 341.970015,
+          "change24hPct": 1.59,
+          "liquidityUsd": 1840000,
+          "referenceFreshnessMinutes": 0,
+          "marketSession": "open",
+          "materialEvent": false,
+          "source": "okx",
+          "observedAt": "2026-08-20T17:46:43.102Z"
+        },
+        {
+          "assetId": "googlx",
+          "symbol": "GOOGLx",
+          "name": "Alphabet xStock",
+          "issuerId": "alphabet",
+          "issuerName": "Alphabet Inc.",
+          "sectorId": "technology",
+          "sectorName": "Technology",
+          "category": "tokenized-equity",
+          "priceUsd": 340.7950075,
+          "change24hPct": -0.23,
+          "liquidityUsd": 1320000,
+          "referenceFreshnessMinutes": 0,
+          "marketSession": "open",
+          "materialEvent": false,
+          "source": "okx",
+          "observedAt": "2026-08-20T17:46:43.102Z"
+        },
+        {
+          "assetId": "mstrx",
+          "symbol": "MSTRx",
+          "name": "Strategy xStock",
+          "issuerId": "strategy",
+          "issuerName": "Strategy Inc.",
+          "sectorId": "technology",
+          "sectorName": "Technology",
+          "category": "tokenized-equity",
+          "priceUsd": 111.720075,
+          "change24hPct": -1.34,
+          "liquidityUsd": 910000,
+          "referenceFreshnessMinutes": 0,
+          "marketSession": "open",
+          "materialEvent": false,
+          "source": "okx",
+          "observedAt": "2026-08-20T17:46:43.102Z"
+        }
+      ]
+    },
+    "okx": {
+      "state": "LIVE",
+      "fetchedAt": "2026-08-20T17:46:57.508Z",
+      "provider": "OKX",
+      "baseUrl": "https://web3.okx.com",
+      "entries": {
+        "tslax": {
+          "state": "LIVE",
+          "context": {
+            "asset": "TSLAx",
+            "chainId": 1,
+            "quoteTimestamp": 1787248003102,
+            "referenceAgeSeconds": 14,
+            "provider": "OKX",
+            "rawReferenceId": "index-price:1:0x8ad3c73f833d3f9a523ab01476625f269aeb7cf0",
+            "price": "341.970015000000000000",
+            "expectedSlippageBps": 13
+          }
+        },
+        "googlx": {
+          "state": "LIVE",
+          "context": {
+            "asset": "GOOGLx",
+            "chainId": 1,
+            "quoteTimestamp": 1787248003102,
+            "referenceAgeSeconds": 14,
+            "provider": "OKX",
+            "rawReferenceId": "index-price:1:0xe92f673ca36c5e2efd2de7628f815f84807e803f",
+            "price": "340.795007500000000000"
+          }
+        },
+        "mstrx": {
+          "state": "LIVE",
+          "context": {
+            "asset": "MSTRx",
+            "chainId": 1,
+            "quoteTimestamp": 1787248003102,
+            "referenceAgeSeconds": 14,
+            "provider": "OKX",
+            "rawReferenceId": "index-price:1:0xae2f842ef90c0d5213259ab82639d5bbf649b08e",
+            "price": "111.720075000000000000",
+            "expectedSlippageBps": 0
+          }
+        }
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "plan": {
+          "id": "plan-2026-08-14-18-25-001",
+          "mandateId": "mandate-rwa-alpha-01",
+          "intents": [
+            {
+              "id": "intent-plan-2026-08-14-18-25-001-1",
+              "assetId": "tslax",
+              "symbol": "TSLAX",
+              "side": "BUY",
+              "notionalUsd": 2500,
+              "expectedSlippageBps": 13,
+              "rationale": "Favor TSLAx as primary allocation, using $2,500 of the $4,500 target."
+            },
+            {
+              "id": "intent-plan-2026-08-14-18-25-001-2",
+              "assetId": "googlx",
+              "symbol": "GOOGLX",
+              "side": "BUY",
+              "notionalUsd": 1000,
+              "expectedSlippageBps": 0,
+              "rationale": "Diversify into GOOGLx with $1,000 after TSLAx."
+            },
+            {
+              "id": "intent-plan-2026-08-14-18-25-001-3",
+              "assetId": "mstrx",
+              "symbol": "MSTRX",
+              "side": "BUY",
+              "notionalUsd": 1000,
+              "expectedSlippageBps": 0,
+              "rationale": "Diversify into MSTRx with $1,000 after TSLAx."
+            }
+          ],
+          "thesis": "Prioritize TSLAx with the largest share, then split the remainder between GOOGLx",
+          "allocationRationale": "Prioritize TSLAx with the largest share, then split the remainder between GOOGLx",
+          "expectedAllocation": {
+            "cashUsd": 2000,
+            "holdings": [
+              {
+                "assetId": "tslax",
+                "symbol": "TSLAX",
+                "notionalUsd": 4000,
+                "pctNav": 40
+              },
+              {
+                "assetId": "googlx",
+                "symbol": "GOOGLX",
+                "notionalUsd": 2500,
+                "pctNav": 25
+              },
+              {
+                "assetId": "mstrx",
+                "symbol": "MSTRX",
+                "notionalUsd": 1500,
+                "pctNav": 15
+              }
+            ]
+          },
+          "assumptions": [
+            "Market prices are taken from the provided OKX Onchain OS context.",
+            "No transaction fees are applied.",
+            "All trades are executed at the quoted prices."
+          ],
+          "provider": "openrouter",
+          "model": "dots-studio/dots-3-note-preview-20260813:free",
+          "generatedAt": "2026-08-20T17:47:02.000Z",
+          "provenance": {
+            "provider": "openrouter",
+            "generationId": "gen-1787248022-vyTprWa0NnKD2GNnYDNo",
+            "requestedModel": "dots-studio/dots-3-note-preview:free",
+            "resolvedModel": "dots-studio/dots-3-note-preview-20260813:free",
+            "upstreamProvider": "AtlasCloud",
+            "requestId": "req-1787248022-TWnqPkxG65iOyXihW902",
+            "requestHash": "sha256:ae86bf01749014e55aa6243029d50b8d8da15980b1d0137ea762f69b32a158a1",
+            "completionHash": "sha256:2a377807d5a8607d5f20fa42c5442fea939d176373778dba6307b040c8abd553",
+            "normalizedOutputHash": "sha256:f561d59406b61c0710994e16dea58aee91f18b8632bc7cee9f9a0977512086e6",
+            "rawCompletion": "{\"allocationRationale\":\"Prioritize TSLAx with the largest share, then split the remainder between GOOGLx and MSTRx to diversify.\",\"assumptions\":[\"Market prices are taken from the provided OKX Onchain OS context.\",\"No transaction fees are applied.\",\"All trades are executed at the quoted prices.\"],\"expectedAllocation\":{\"cashUsd\":2000,\"holdings\":[{\"assetId\":\"tslax\",\"notionalUsd\":4000,\"pctNav\":40.0,\"symbol\":\"TSLAx\"},{\"assetId\":\"googlx\",\"notionalUsd\":2500,\"pctNav\":25.0,\"symbol\":\"GOOGLx\"},{\"assetId\":\"mstrx\",\"notionalUsd\":1500,\"pctNav\":15.0,\"symbol\":\"MSTRx\"}]},\"intents\":[{\"assetId\":\"tslax\",\"expectedSlippageBps\":13,\"notionalUsd\":2500,\"rationale\":\"Favor TSLAx as primary allocation, using $2,500 of the $4,500 target.\",\"side\":\"BUY\",\"symbol\":\"TSLAx\"},{\"assetId\":\"googlx\",\"expectedSlippageBps\":0,\"notionalUsd\":1000,\"rationale\":\"Diversify into GOOGLx with $1,000 after TSLAx.\",\"side\":\"BUY\",\"symbol\":\"GOOGLx\"},{\"assetId\":\"mstrx\",\"expectedSlippageBps\":0,\"notionalUsd\":1000,\"rationale\":\"Diversify into MSTRx with $1,000 after TSLAx.\",\"side\":\"BUY\",\"symbol\":\"MSTRx\"}],\"planId\":\"plan-2026-08-14-18-25-001\"}",
+            "finishReason": "stop",
+            "promptTokens": 735,
+            "completionTokens": 1552,
+            "generatedAt": "2026-08-20T17:47:02.000Z",
+            "metadataVerifiedAt": "2026-08-20T17:47:25.869Z",
+            "metadataVerified": true
+          },
+          "objective": "Deploy up to $4,500 of available cash into tokenized US equities. Favor TSLAx, then diversify across GOOGLx and MSTRx."
+        },
+        "decision": {
+          "allowed": false,
+          "verdict": "BLOCKED",
+          "violations": [
+            {
+              "code": "ISSUER_CONCENTRATION_EXCEEDED",
+              "bucketId": "tesla",
+              "issuer": "Tesla, Inc.",
+              "message": "Tesla, Inc. exposure would become 40.0% of NAV.",
+              "actual": 40,
+              "limit": 35,
+              "projectedExposureBps": 4000,
+              "limitBps": 3500
+            }
+          ],
+          "checkedAt": "2026-08-20T17:47:25.888Z",
+          "planHash": "sha256:dee96a6788448636a30124b15fea3ce44c0a23eaae03d5a1661b93ab75aa45c8",
+          "mandateHash": "sha256:bfd9c1c4b7f8030f22463da9ae2e0c68a782558145283ffb1ac2638dadcb60c2",
+          "beforePortfolioHash": "sha256:7f61433a72f486d102404bfa2002889735002792ee50ca09b8a68b7df2afad0b",
+          "afterPortfolioHash": "sha256:01177e6a65ff64be771cc97d45a20f7dde99fefb22e69ae311dcc003c24689fa",
+          "before": {
+            "investedUsd": 3500,
+            "cashUsd": 6500,
+            "dailyTurnoverUsd": 500,
+            "assetUsd": {
+              "tslax": 1500,
+              "googlx": 1500,
+              "mstrx": 500
+            },
+            "issuerUsd": {
+              "tesla": 1500,
+              "alphabet": 1500,
+              "strategy": 500
+            },
+            "sectorUsd": {
+              "automotive": 1500,
+              "technology": 2000
+            }
+          },
+          "after": {
+            "investedUsd": 8000,
+            "cashUsd": 2000,
+            "dailyTurnoverUsd": 5000,
+            "assetUsd": {
+              "tslax": 4000,
+              "googlx": 2500,
+              "mstrx": 1500
+            },
+            "issuerUsd": {
+              "tesla": 4000,
+              "alphabet": 2500,
+              "strategy": 1500
+            },
+            "sectorUsd": {
+              "automotive": 4000,
+              "technology": 4000
+            }
+          },
+          "afterState": {
+            "id": "portfolio-agent-01",
+            "mandateId": "mandate-rwa-alpha-01",
+            "navUsd": 10000,
+            "cashUsd": 2000,
+            "holdings": [
+              {
+                "assetId": "tslax",
+                "notionalUsd": 4000
+              },
+              {
+                "assetId": "googlx",
+                "notionalUsd": 2500
+              },
+              {
+                "assetId": "mstrx",
+                "notionalUsd": 1500
+              }
+            ],
+            "dailyTurnoverUsd": 5000,
+            "asOf": "2026-08-20T17:47:25.888Z"
+          }
+        },
+        "receipt": {
+          "id": "circuit-proof:plan-2026-08-14-18-25-001:2026-08-20T17:47:25.888Z",
+          "mandateId": "mandate-rwa-alpha-01",
+          "portfolioId": "portfolio-agent-01",
+          "planId": "plan-2026-08-14-18-25-001",
+          "planHash": "sha256:dee96a6788448636a30124b15fea3ce44c0a23eaae03d5a1661b93ab75aa45c8",
+          "mandateHash": "sha256:bfd9c1c4b7f8030f22463da9ae2e0c68a782558145283ffb1ac2638dadcb60c2",
+          "beforePortfolioHash": "sha256:7f61433a72f486d102404bfa2002889735002792ee50ca09b8a68b7df2afad0b",
+          "afterPortfolioHash": "sha256:01177e6a65ff64be771cc97d45a20f7dde99fefb22e69ae311dcc003c24689fa",
+          "verdict": "BLOCKED",
+          "violations": [
+            {
+              "code": "ISSUER_CONCENTRATION_EXCEEDED",
+              "bucketId": "tesla",
+              "issuer": "Tesla, Inc.",
+              "message": "Tesla, Inc. exposure would become 40.0% of NAV.",
+              "actual": 40,
+              "limit": 35,
+              "projectedExposureBps": 4000,
+              "limitBps": 3500
+            }
+          ],
+          "chainId": 1952,
+          "proofMode": "local",
+          "createdAt": "2026-08-20T17:47:25.888Z",
+          "receiptHash": "sha256:44f1a2c8ef786b6a638a3bdaf583729bc5ccf3111f641750e61a6c1caae24b07"
+        }
+      },
+      {
+        "attempt": 2,
+        "plan": {
+          "id": "plan-2026-08-14-18-25-002",
+          "mandateId": "mandate-rwa-alpha-01",
+          "intents": [
+            {
+              "id": "intent-plan-2026-08-14-18-25-002-1",
+              "assetId": "tslax",
+              "symbol": "TSLAX",
+              "side": "BUY",
+              "notionalUsd": 2000,
+              "expectedSlippageBps": 13,
+              "rationale": "Maximize TSLAx exposure up to 35% issuer limit (current 15% + 20% = 35%)"
+            },
+            {
+              "id": "intent-plan-2026-08-14-18-25-002-2",
+              "assetId": "googlx",
+              "symbol": "GOOGLX",
+              "side": "BUY",
+              "notionalUsd": 1250,
+              "expectedSlippageBps": 0,
+              "rationale": "Diversify into GOOGLx after TSLAx allocation, maintaining equal split with MSTRx"
+            },
+            {
+              "id": "intent-plan-2026-08-14-18-25-002-3",
+              "assetId": "mstrx",
+              "symbol": "MSTRX",
+              "side": "BUY",
+              "notionalUsd": 1250,
+              "expectedSlippageBps": 0,
+              "rationale": "Diversify into MSTRx after TSLAx allocation, maintaining equal split with GOOGLx"
+            }
+          ],
+          "thesis": "Maximize TSLAx within 35% issuer limit, then diversify remaining $2,500 equally ",
+          "allocationRationale": "Maximize TSLAx within 35% issuer limit, then diversify remaining $2,500 equally ",
+          "expectedAllocation": {
+            "cashUsd": 2000,
+            "holdings": [
+              {
+                "assetId": "tslax",
+                "symbol": "TSLAX",
+                "notionalUsd": 3500,
+                "pctNav": 35
+              },
+              {
+                "assetId": "googlx",
+                "symbol": "GOOGLX",
+                "notionalUsd": 2750,
+                "pctNav": 27.5
+              },
+              {
+                "assetId": "mstrx",
+                "symbol": "MSTRX",
+                "notionalUsd": 1750,
+                "pctNav": 17.5
+              }
+            ]
+          },
+          "assumptions": [
+            "All assets assumed to be in different sectors or sector limit not binding due to",
+            "Fractional shares allowed",
+            "Market conditions remain stable during execution"
+          ],
+          "provider": "openrouter",
+          "model": "dots-studio/dots-3-note-preview-20260813:free",
+          "generatedAt": "2026-08-20T17:47:26.000Z",
+          "provenance": {
+            "provider": "openrouter",
+            "generationId": "gen-1787248046-1w6l93wqd06QCjiRe6l1",
+            "requestedModel": "dots-studio/dots-3-note-preview:free",
+            "resolvedModel": "dots-studio/dots-3-note-preview-20260813:free",
+            "upstreamProvider": "AtlasCloud",
+            "requestId": "req-1787248046-tYvccwfoF6RSegENjhQX",
+            "requestHash": "sha256:b13eec4252b9e4aca7d0febe310ff06e7a0af010782651cdc3a8f10a1328e6b6",
+            "completionHash": "sha256:ca45b97f19e6dfff2058de8798b0f23185d5ab6c8432dec87f156fb2ee721eb5",
+            "normalizedOutputHash": "sha256:0ac4cccd13f36f12812af182658fd25b17d136b6544855c531d4b66b4e29d79e",
+            "rawCompletion": "{\"allocationRationale\":\"Maximize TSLAx within 35% issuer limit, then diversify remaining $2,500 equally between GOOGLx and MSTRx to achieve $4,500 total deployment.\",\"assumptions\":[\"All assets assumed to be in different sectors or sector limit not binding due to lack of data\",\"Fractional shares allowed\",\"Market conditions remain stable during execution\"],\"expectedAllocation\":{\"cashUsd\":2000,\"holdings\":[{\"assetId\":\"tslax\",\"notionalUsd\":3500,\"pctNav\":35.0,\"symbol\":\"TSLAx\"},{\"assetId\":\"googlx\",\"notionalUsd\":2750,\"pctNav\":27.5,\"symbol\":\"GOOGLx\"},{\"assetId\":\"mstrx\",\"notionalUsd\":1750,\"pctNav\":17.5,\"symbol\":\"MSTRx\"}]},\"intents\":[{\"assetId\":\"tslax\",\"expectedSlippageBps\":13,\"notionalUsd\":2000,\"rationale\":\"Maximize TSLAx exposure up to 35% issuer limit (current 15% + 20% = 35%)\",\"side\":\"BUY\",\"symbol\":\"TSLAx\"},{\"assetId\":\"googlx\",\"expectedSlippageBps\":0,\"notionalUsd\":1250,\"rationale\":\"Diversify into GOOGLx after TSLAx allocation, maintaining equal split with MSTRx\",\"side\":\"BUY\",\"symbol\":\"GOOGLx\"},{\"assetId\":\"mstrx\",\"expectedSlippageBps\":0,\"notionalUsd\":1250,\"rationale\":\"Diversify into MSTRx after TSLAx allocation, maintaining equal split with GOOGLx\",\"side\":\"BUY\",\"symbol\":\"MSTRx\"}],\"planId\":\"plan-2026-08-14-18-25-002\"}",
+            "finishReason": "stop",
+            "promptTokens": 966,
+            "completionTokens": 3056,
+            "generatedAt": "2026-08-20T17:47:26.000Z",
+            "metadataVerifiedAt": "2026-08-20T17:47:57.171Z",
+            "metadataVerified": true
+          },
+          "revisionOf": "plan-2026-08-14-18-25-001",
+          "objective": "Deploy up to $4,500 of available cash into tokenized US equities. Favor TSLAx, then diversify across GOOGLx and MSTRx."
+        },
+        "decision": {
+          "allowed": true,
+          "verdict": "AUTHORIZED",
+          "violations": [],
+          "checkedAt": "2026-08-20T17:47:57.172Z",
+          "planHash": "sha256:0ae5755704fbbfe777e66ff3fc174398ba0f85e0e0093586379941fd5f9a03d5",
+          "mandateHash": "sha256:bfd9c1c4b7f8030f22463da9ae2e0c68a782558145283ffb1ac2638dadcb60c2",
+          "beforePortfolioHash": "sha256:7f61433a72f486d102404bfa2002889735002792ee50ca09b8a68b7df2afad0b",
+          "afterPortfolioHash": "sha256:dca965b15b4b1bb60421afe15e3692f97245d78e9b4d713c25f8586a57e762c6",
+          "before": {
+            "investedUsd": 3500,
+            "cashUsd": 6500,
+            "dailyTurnoverUsd": 500,
+            "assetUsd": {
+              "tslax": 1500,
+              "googlx": 1500,
+              "mstrx": 500
+            },
+            "issuerUsd": {
+              "tesla": 1500,
+              "alphabet": 1500,
+              "strategy": 500
+            },
+            "sectorUsd": {
+              "automotive": 1500,
+              "technology": 2000
+            }
+          },
+          "after": {
+            "investedUsd": 8000,
+            "cashUsd": 2000,
+            "dailyTurnoverUsd": 5000,
+            "assetUsd": {
+              "tslax": 3500,
+              "googlx": 2750,
+              "mstrx": 1750
+            },
+            "issuerUsd": {
+              "tesla": 3500,
+              "alphabet": 2750,
+              "strategy": 1750
+            },
+            "sectorUsd": {
+              "automotive": 3500,
+              "technology": 4500
+            }
+          },
+          "afterState": {
+            "id": "portfolio-agent-01",
+            "mandateId": "mandate-rwa-alpha-01",
+            "navUsd": 10000,
+            "cashUsd": 2000,
+            "holdings": [
+              {
+                "assetId": "tslax",
+                "notionalUsd": 3500
+              },
+              {
+                "assetId": "googlx",
+                "notionalUsd": 2750
+              },
+              {
+                "assetId": "mstrx",
+                "notionalUsd": 1750
+              }
+            ],
+            "dailyTurnoverUsd": 5000,
+            "asOf": "2026-08-20T17:47:57.172Z"
+          }
+        },
+        "receipt": {
+          "id": "circuit-proof:plan-2026-08-14-18-25-002:2026-08-20T17:47:57.172Z",
+          "mandateId": "mandate-rwa-alpha-01",
+          "portfolioId": "portfolio-agent-01",
+          "planId": "plan-2026-08-14-18-25-002",
+          "planHash": "sha256:0ae5755704fbbfe777e66ff3fc174398ba0f85e0e0093586379941fd5f9a03d5",
+          "mandateHash": "sha256:bfd9c1c4b7f8030f22463da9ae2e0c68a782558145283ffb1ac2638dadcb60c2",
+          "beforePortfolioHash": "sha256:7f61433a72f486d102404bfa2002889735002792ee50ca09b8a68b7df2afad0b",
+          "afterPortfolioHash": "sha256:dca965b15b4b1bb60421afe15e3692f97245d78e9b4d713c25f8586a57e762c6",
+          "verdict": "AUTHORIZED",
+          "violations": [],
+          "chainId": 1952,
+          "proofMode": "local",
+          "createdAt": "2026-08-20T17:47:57.172Z",
+          "previousReceiptHash": "sha256:44f1a2c8ef786b6a638a3bdaf583729bc5ccf3111f641750e61a6c1caae24b07",
+          "receiptHash": "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2"
+        },
+        "revisionOf": "plan-2026-08-14-18-25-001"
+      }
+    ],
+    "onchain": {
+      "status": "ONCHAIN_AUTHORIZED",
+      "ok": true,
+      "chainId": 1952,
+      "policyKey": "0x79efc37ba3177e148794b10da156c22ce557f2cbddb5f772f68bbe6b237cc592",
+      "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+      "policyVersion": 1,
+      "registry": "0x4FE654814808d4DeB73D77e30815c2f23b969B9b",
+      "guard": "0x41992657dAd81F89e61A29887b9bdd1F7cE9Ff77",
+      "publisher": "0xB2F3c78c66B50589c7dD8bC2A937994d3F24eE21",
+      "txs": {
+        "mandateTxHash": "0xf13009c2b7f7937376745e1a9382db624bd00bee6b863f9eccde7fa96b2c83f1",
+        "mandateBlock": 38789245,
+        "seedTxHash": "0xb5ca9f295474ad63dcdc676216603277ac4121dfe196f2d4f58849b2791fc07b",
+        "seedBlock": 38789246
+      },
+      "trades": [
+        {
+          "assetId": "tslax",
+          "side": "BUY",
+          "notionalUsd": 2000,
+          "intentHash": "0x52a451dfdacb9eae8d9ec9242937c91c33e81bea91c77032b0b72cbb6136fa0f",
+          "txHash": "0x5c82f91a54bc998ce780afe59132fa0846da4d8935ce770784305f4cd9c9e6c6",
+          "blockNumber": 38789250,
+          "status": 1,
+          "authorizationHash": "0xaeab7193db3208a7ee4919d7f3b82d1815b2f074d81fdbfb829e81632da3aa06"
+        },
+        {
+          "assetId": "googlx",
+          "side": "BUY",
+          "notionalUsd": 1250,
+          "intentHash": "0x096b8bbfddf7c98db7f9a41f1dbb409ebc2ae47520217b50eaa371240c6ba73e",
+          "txHash": "0x2d916a4cd7a7274f4ec8b4547e6172f6c1cc3d1078a1d17b82c5b83c74bd29f7",
+          "blockNumber": 38789255,
+          "status": 1,
+          "authorizationHash": "0x23b7f15b466475f40e60f68f69084a4006852b0dceaee3cb5987ea5c2c2248ee"
+        },
+        {
+          "assetId": "mstrx",
+          "side": "BUY",
+          "notionalUsd": 1250,
+          "intentHash": "0xa93fffaf077290b1e51b61e31ac6e0a9cc84ebd1c919a332ac7f610ba62401ca",
+          "txHash": "0x7f7ccb232a2bfbbd87fde7fbd98406021d0c91c60dd07d97278966f0fe6a0692",
+          "blockNumber": 38789260,
+          "status": 1,
+          "authorizationHash": "0x717c09485c3bb801eddadc987e173522938c67bf883c456f361b8d1dfb6f9c90"
+        }
+      ],
+      "readback": {
+        "assetUsd": {
+          "tslax": 3500,
+          "googlx": 2750,
+          "mstrx": 1750
+        },
+        "cashUsd": 2000,
+        "dailyTurnoverUsd": 5000,
+        "totalInvested": 8000
+      }
+    },
+    "judgeReceipt": {
+      "id": "judge-receipt:trace-1787248017439",
+      "chainId": 1952,
+      "createdAt": "2026-08-20T17:48:20.758Z",
+      "objectiveHash": "0x84dd5b941d3b646c56b973a5bd4d8d2bdcb320e7bae0c6b293342c45882fb99e",
+      "plan1Hash": "sha256:dee96a6788448636a30124b15fea3ce44c0a23eaae03d5a1661b93ab75aa45c8",
+      "plan2Hash": "sha256:0ae5755704fbbfe777e66ff3fc174398ba0f85e0e0093586379941fd5f9a03d5",
+      "evaluationHash": "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2",
+      "rejectionCode": "ISSUER_CONCENTRATION_EXCEEDED",
+      "rejection": {
+        "code": "ISSUER_CONCENTRATION_EXCEEDED",
+        "bucketId": "tesla",
+        "issuer": "Tesla, Inc.",
+        "message": "Tesla, Inc. exposure would become 40.0% of NAV.",
+        "actual": 40,
+        "limit": 35,
+        "projectedExposureBps": 4000,
+        "limitBps": 3500
+      },
+      "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+      "policyVersion": 1,
+      "policyKey": "0x79efc37ba3177e148794b10da156c22ce557f2cbddb5f772f68bbe6b237cc592",
+      "intentHash": "0x52a451dfdacb9eae8d9ec9242937c91c33e81bea91c77032b0b72cbb6136fa0f",
+      "authorizationHash": "0xaeab7193db3208a7ee4919d7f3b82d1815b2f074d81fdbfb829e81632da3aa06",
+      "transactionHash": "0x5c82f91a54bc998ce780afe59132fa0846da4d8935ce770784305f4cd9c9e6c6",
+      "aiEvidence": [
+        {
+          "attempt": 1,
+          "planId": "plan-2026-08-14-18-25-001",
+          "planHash": "sha256:dee96a6788448636a30124b15fea3ce44c0a23eaae03d5a1661b93ab75aa45c8",
+          "provider": "openrouter",
+          "model": "dots-studio/dots-3-note-preview-20260813:free",
+          "generationId": "gen-1787248022-vyTprWa0NnKD2GNnYDNo",
+          "requestHash": "sha256:ae86bf01749014e55aa6243029d50b8d8da15980b1d0137ea762f69b32a158a1",
+          "completionHash": "sha256:2a377807d5a8607d5f20fa42c5442fea939d176373778dba6307b040c8abd553",
+          "normalizedOutputHash": "sha256:f561d59406b61c0710994e16dea58aee91f18b8632bc7cee9f9a0977512086e6",
+          "metadataVerified": true
+        },
+        {
+          "attempt": 2,
+          "planId": "plan-2026-08-14-18-25-002",
+          "planHash": "sha256:0ae5755704fbbfe777e66ff3fc174398ba0f85e0e0093586379941fd5f9a03d5",
+          "provider": "openrouter",
+          "model": "dots-studio/dots-3-note-preview-20260813:free",
+          "generationId": "gen-1787248046-1w6l93wqd06QCjiRe6l1",
+          "requestHash": "sha256:b13eec4252b9e4aca7d0febe310ff06e7a0af010782651cdc3a8f10a1328e6b6",
+          "completionHash": "sha256:ca45b97f19e6dfff2058de8798b0f23185d5ab6c8432dec87f156fb2ee721eb5",
+          "normalizedOutputHash": "sha256:0ac4cccd13f36f12812af182658fd25b17d136b6544855c531d4b66b4e29d79e",
+          "metadataVerified": true
+        }
+      ],
+      "evaluationReceiptHashes": [
+        "sha256:44f1a2c8ef786b6a638a3bdaf583729bc5ccf3111f641750e61a6c1caae24b07",
+        "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2"
+      ],
+      "onchainReadbackHash": "sha256:c6f3d33a3ba43b1d24f8b388dcc2e564d7fef6b9c7cbdacde0e72a376c7e2648",
+      "trades": [
+        {
+          "assetId": "tslax",
+          "side": "BUY",
+          "notionalUsd": 2000,
+          "intentHash": "0x52a451dfdacb9eae8d9ec9242937c91c33e81bea91c77032b0b72cbb6136fa0f",
+          "txHash": "0x5c82f91a54bc998ce780afe59132fa0846da4d8935ce770784305f4cd9c9e6c6",
+          "blockNumber": 38789250,
+          "status": 1,
+          "authorizationHash": "0xaeab7193db3208a7ee4919d7f3b82d1815b2f074d81fdbfb829e81632da3aa06"
+        },
+        {
+          "assetId": "googlx",
+          "side": "BUY",
+          "notionalUsd": 1250,
+          "intentHash": "0x096b8bbfddf7c98db7f9a41f1dbb409ebc2ae47520217b50eaa371240c6ba73e",
+          "txHash": "0x2d916a4cd7a7274f4ec8b4547e6172f6c1cc3d1078a1d17b82c5b83c74bd29f7",
+          "blockNumber": 38789255,
+          "status": 1,
+          "authorizationHash": "0x23b7f15b466475f40e60f68f69084a4006852b0dceaee3cb5987ea5c2c2248ee"
+        },
+        {
+          "assetId": "mstrx",
+          "side": "BUY",
+          "notionalUsd": 1250,
+          "intentHash": "0xa93fffaf077290b1e51b61e31ac6e0a9cc84ebd1c919a332ac7f610ba62401ca",
+          "txHash": "0x7f7ccb232a2bfbbd87fde7fbd98406021d0c91c60dd07d97278966f0fe6a0692",
+          "blockNumber": 38789260,
+          "status": 1,
+          "authorizationHash": "0x717c09485c3bb801eddadc987e173522938c67bf883c456f361b8d1dfb6f9c90"
+        }
+      ],
+      "finalPortfolioHash": "sha256:dca965b15b4b1bb60421afe15e3692f97245d78e9b4d713c25f8586a57e762c6",
+      "previousReceiptHash": "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2",
+      "receiptHash": "sha256:a6b31b4d5f84e0f2500538d6f95e1a243ace21ffaeb83816b758c84eaa62c382"
+    },
+    "proofVerification": {
+      "valid": true,
+      "checks": [
+        {
+          "id": "JUDGE_RECEIPT_HASH",
+          "valid": true,
+          "detail": "Judge receipt hash recomputes from every linked field."
+        },
+        {
+          "id": "PLAN_HASHES",
+          "valid": true,
+          "detail": "Every evaluated plan hash recomputes."
+        },
+        {
+          "id": "OPENROUTER_GENERATIONS",
+          "valid": true,
+          "detail": "plan-2026-08-14-18-25-001 is bound to OpenRouter generation gen-1787248022-vyTprWa0NnKD2GNnYDNo | plan-2026-08-14-18-25-002 is bound to OpenRouter generation gen-1787248046-1w6l93wqd06QCjiRe6l1"
+        },
+        {
+          "id": "AI_EVIDENCE_LINKS",
+          "valid": true,
+          "detail": "Receipt AI links match every planning attempt."
+        },
+        {
+          "id": "EVALUATION_RECEIPTS",
+          "valid": true,
+          "detail": "Every Circuit evaluation receipt recomputes and matches its plan."
+        },
+        {
+          "id": "EVALUATION_CHAIN",
+          "valid": true,
+          "detail": "The judge receipt links the complete evaluation receipt chain."
+        },
+        {
+          "id": "ONCHAIN_TRANSACTIONS",
+          "valid": true,
+          "detail": "Every final-plan intent links to a successful X Layer transaction."
+        },
+        {
+          "id": "ONCHAIN_READBACK",
+          "valid": true,
+          "detail": "The onchain readback hash matches the judge receipt."
+        },
+        {
+          "id": "HEADLINE_TRANSACTION",
+          "valid": true,
+          "detail": "Headline execution fields match the first verified trade."
+        }
+      ]
+    },
+    "committed": true,
+    "finalPortfolio": {
+      "id": "portfolio-agent-01",
+      "mandateId": "mandate-rwa-alpha-01",
+      "navUsd": 10000,
+      "cashUsd": 2000,
+      "holdings": [
+        {
+          "assetId": "tslax",
+          "notionalUsd": 3500
+        },
+        {
+          "assetId": "googlx",
+          "notionalUsd": 2750
+        },
+        {
+          "assetId": "mstrx",
+          "notionalUsd": 1750
+        }
+      ],
+      "dailyTurnoverUsd": 5000,
+      "asOf": "2026-08-20T17:48:20.758Z"
+    }
+  },
+  "receipt": {
+    "id": "judge-receipt:trace-1787248017439",
+    "chainId": 1952,
+    "createdAt": "2026-08-20T17:48:20.758Z",
+    "objectiveHash": "0x84dd5b941d3b646c56b973a5bd4d8d2bdcb320e7bae0c6b293342c45882fb99e",
+    "plan1Hash": "sha256:dee96a6788448636a30124b15fea3ce44c0a23eaae03d5a1661b93ab75aa45c8",
+    "plan2Hash": "sha256:0ae5755704fbbfe777e66ff3fc174398ba0f85e0e0093586379941fd5f9a03d5",
+    "evaluationHash": "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2",
+    "rejectionCode": "ISSUER_CONCENTRATION_EXCEEDED",
+    "rejection": {
+      "code": "ISSUER_CONCENTRATION_EXCEEDED",
+      "bucketId": "tesla",
+      "issuer": "Tesla, Inc.",
+      "message": "Tesla, Inc. exposure would become 40.0% of NAV.",
+      "actual": 40,
+      "limit": 35,
+      "projectedExposureBps": 4000,
+      "limitBps": 3500
+    },
+    "mandateHash": "0xc7f27d59334d3c6acf1b84017f6f2c6390c9b23800f3d99f9dbbe69b10f39d47",
+    "policyVersion": 1,
+    "policyKey": "0x79efc37ba3177e148794b10da156c22ce557f2cbddb5f772f68bbe6b237cc592",
+    "intentHash": "0x52a451dfdacb9eae8d9ec9242937c91c33e81bea91c77032b0b72cbb6136fa0f",
+    "authorizationHash": "0xaeab7193db3208a7ee4919d7f3b82d1815b2f074d81fdbfb829e81632da3aa06",
+    "transactionHash": "0x5c82f91a54bc998ce780afe59132fa0846da4d8935ce770784305f4cd9c9e6c6",
+    "aiEvidence": [
+      {
+        "attempt": 1,
+        "planId": "plan-2026-08-14-18-25-001",
+        "planHash": "sha256:dee96a6788448636a30124b15fea3ce44c0a23eaae03d5a1661b93ab75aa45c8",
+        "provider": "openrouter",
+        "model": "dots-studio/dots-3-note-preview-20260813:free",
+        "generationId": "gen-1787248022-vyTprWa0NnKD2GNnYDNo",
+        "requestHash": "sha256:ae86bf01749014e55aa6243029d50b8d8da15980b1d0137ea762f69b32a158a1",
+        "completionHash": "sha256:2a377807d5a8607d5f20fa42c5442fea939d176373778dba6307b040c8abd553",
+        "normalizedOutputHash": "sha256:f561d59406b61c0710994e16dea58aee91f18b8632bc7cee9f9a0977512086e6",
+        "metadataVerified": true
+      },
+      {
+        "attempt": 2,
+        "planId": "plan-2026-08-14-18-25-002",
+        "planHash": "sha256:0ae5755704fbbfe777e66ff3fc174398ba0f85e0e0093586379941fd5f9a03d5",
+        "provider": "openrouter",
+        "model": "dots-studio/dots-3-note-preview-20260813:free",
+        "generationId": "gen-1787248046-1w6l93wqd06QCjiRe6l1",
+        "requestHash": "sha256:b13eec4252b9e4aca7d0febe310ff06e7a0af010782651cdc3a8f10a1328e6b6",
+        "completionHash": "sha256:ca45b97f19e6dfff2058de8798b0f23185d5ab6c8432dec87f156fb2ee721eb5",
+        "normalizedOutputHash": "sha256:0ac4cccd13f36f12812af182658fd25b17d136b6544855c531d4b66b4e29d79e",
+        "metadataVerified": true
+      }
+    ],
+    "evaluationReceiptHashes": [
+      "sha256:44f1a2c8ef786b6a638a3bdaf583729bc5ccf3111f641750e61a6c1caae24b07",
+      "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2"
+    ],
+    "onchainReadbackHash": "sha256:c6f3d33a3ba43b1d24f8b388dcc2e564d7fef6b9c7cbdacde0e72a376c7e2648",
+    "trades": [
+      {
+        "assetId": "tslax",
+        "side": "BUY",
+        "notionalUsd": 2000,
+        "intentHash": "0x52a451dfdacb9eae8d9ec9242937c91c33e81bea91c77032b0b72cbb6136fa0f",
+        "txHash": "0x5c82f91a54bc998ce780afe59132fa0846da4d8935ce770784305f4cd9c9e6c6",
+        "blockNumber": 38789250,
+        "status": 1,
+        "authorizationHash": "0xaeab7193db3208a7ee4919d7f3b82d1815b2f074d81fdbfb829e81632da3aa06"
+      },
+      {
+        "assetId": "googlx",
+        "side": "BUY",
+        "notionalUsd": 1250,
+        "intentHash": "0x096b8bbfddf7c98db7f9a41f1dbb409ebc2ae47520217b50eaa371240c6ba73e",
+        "txHash": "0x2d916a4cd7a7274f4ec8b4547e6172f6c1cc3d1078a1d17b82c5b83c74bd29f7",
+        "blockNumber": 38789255,
+        "status": 1,
+        "authorizationHash": "0x23b7f15b466475f40e60f68f69084a4006852b0dceaee3cb5987ea5c2c2248ee"
+      },
+      {
+        "assetId": "mstrx",
+        "side": "BUY",
+        "notionalUsd": 1250,
+        "intentHash": "0xa93fffaf077290b1e51b61e31ac6e0a9cc84ebd1c919a332ac7f610ba62401ca",
+        "txHash": "0x7f7ccb232a2bfbbd87fde7fbd98406021d0c91c60dd07d97278966f0fe6a0692",
+        "blockNumber": 38789260,
+        "status": 1,
+        "authorizationHash": "0x717c09485c3bb801eddadc987e173522938c67bf883c456f361b8d1dfb6f9c90"
+      }
+    ],
+    "finalPortfolioHash": "sha256:dca965b15b4b1bb60421afe15e3692f97245d78e9b4d713c25f8586a57e762c6",
+    "previousReceiptHash": "sha256:a602b10b4259464e02174531caf20351fbf76fc3320db1b0e0d3b22b1e89c1e2",
+    "receiptHash": "sha256:a6b31b4d5f84e0f2500538d6f95e1a243ace21ffaeb83816b758c84eaa62c382"
+  },
+  "verification": {
+    "valid": true,
+    "checks": [
+      {
+        "id": "JUDGE_RECEIPT_HASH",
+        "valid": true,
+        "detail": "Judge receipt hash recomputes from every linked field."
+      },
+      {
+        "id": "PLAN_HASHES",
+        "valid": true,
+        "detail": "Every evaluated plan hash recomputes."
+      },
+      {
+        "id": "OPENROUTER_GENERATIONS",
+        "valid": true,
+        "detail": "plan-2026-08-14-18-25-001 is bound to OpenRouter generation gen-1787248022-vyTprWa0NnKD2GNnYDNo | plan-2026-08-14-18-25-002 is bound to OpenRouter generation gen-1787248046-1w6l93wqd06QCjiRe6l1"
+      },
+      {
+        "id": "AI_EVIDENCE_LINKS",
+        "valid": true,
+        "detail": "Receipt AI links match every planning attempt."
+      },
+      {
+        "id": "EVALUATION_RECEIPTS",
+        "valid": true,
+        "detail": "Every Circuit evaluation receipt recomputes and matches its plan."
+      },
+      {
+        "id": "EVALUATION_CHAIN",
+        "valid": true,
+        "detail": "The judge receipt links the complete evaluation receipt chain."
+      },
+      {
+        "id": "ONCHAIN_TRANSACTIONS",
+        "valid": true,
+        "detail": "Every final-plan intent links to a successful X Layer transaction."
+      },
+      {
+        "id": "ONCHAIN_READBACK",
+        "valid": true,
+        "detail": "The onchain readback hash matches the judge receipt."
+      },
+      {
+        "id": "HEADLINE_TRANSACTION",
+        "valid": true,
+        "detail": "Headline execution fields match the first verified trade."
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "capturedAt": "2026-08-15T02:34:51.916Z",
+  "outcome": "FAILED_EXTERNAL",
+  "detail": "OAuth session expired and could not be refreshed — claude.ai account-level limit. MCP connection itself verified in init.",
+  "tools": 8
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111211" />
+  <title>Mandate — Circuit</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body class="page app-page" data-page="mandate">
+  <!-- THESIS: A mandate reads as an active policy instrument, not settings chrome. OWN-WORLD: Chalk document field, charcoal clauses, signal state, and measured data. STORY: Confirm the active policy, inspect its clauses, then read current compliance and history. FIRST VIEWPORT: Mandate identity and live status lead directly into policy metadata. FORM: Control ledger extending the CIRCUIT landing world. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <main class="page-main">
+    <div class="page-head"><div class="page-head-copy"><h1>Mandate / ALPHA-01</h1><p>The active financial policy enforced before portfolio execution.</p></div><span class="chip" id="mandate-status-chip">CHECKING</span></div>
+
+    <section class="section">
+      <div class="section-label"><span>INSTRUMENT&nbsp;</span><span class="muted">&nbsp;POLICY DOCUMENT</span></div>
+      <dl class="kv kv-straight">
+        <dt>MANDATE ID&nbsp;</dt><dd id="m-id">—</dd>
+        <dt>VERSION&nbsp;</dt><dd id="m-version">—</dd>
+        <dt>STATUS&nbsp;</dt><dd id="m-status">—</dd>
+        <dt>ACTIVATION&nbsp;</dt><dd id="m-activated">—</dd>
+        <dt>NAV&nbsp;</dt><dd id="m-nav">—</dd>
+        <dt>ASSET UNIVERSE&nbsp;</dt><dd id="m-universe">—</dd>
+        <dt>MANDATE HASH&nbsp;</dt><dd><code id="m-hash">—</code></dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>CLAUSES&nbsp;</span><span class="muted">&nbsp;ENFORCED BY CircuitPortfolioGuard</span></div>
+      <div class="clause"><span class="n">01&nbsp;</span><div><h3>ELIGIBLE INSTRUMENTS</h3><p>Only registered tokenized equities may enter the portfolio. Unregistered assets are rejected by the guard regardless of the proposal.</p></div><div><div class="cap">UNIVERSE&nbsp;</div><div class="items" id="cl-eligible">—</div></div></div>
+      <div class="clause"><span class="n">02&nbsp;</span><div><h3>SINGLE ISSUER EXPOSURE</h3><p>No single issuer's aggregate position may exceed the mandate ceiling of NAV.</p></div><div><div class="cap">MAXIMUM&nbsp;</div><div class="lim" id="cl-issuer">—</div></div></div>
+      <div class="clause"><span class="n">03&nbsp;</span><div><h3>SECTOR EXPOSURE</h3><p>Aggregate sector concentration is bounded independently of issuer exposure.</p></div><div><div class="cap">MAXIMUM&nbsp;</div><div class="lim" id="cl-sector">—</div></div></div>
+      <div class="clause"><span class="n">04&nbsp;</span><div><h3>DAILY TURNOVER</h3><p>Trading activity per UTC day is bounded as a share of NAV.</p></div><div><div class="cap">MAXIMUM&nbsp;</div><div class="lim" id="cl-turnover">—</div></div></div>
+      <div class="clause"><span class="n">05&nbsp;</span><div><h3>REFERENCE FRESHNESS</h3><p>New exposure requires a reference no older than the freshness window. Stale references block new buys but never block sells.</p></div><div><div class="cap">MAXIMUM&nbsp;</div><div class="lim" id="cl-freshness">—</div></div></div>
+      <div class="clause"><span class="n">06&nbsp;</span><div><h3>EXECUTION CONSTRAINTS</h3><p>Authorized actions may only execute through the whitelisted OKX router with signed spend caps. No arbitrary contract calls exist.</p></div><div><div class="cap">MODE&nbsp;</div><div class="items" id="cl-exec">WHITELISTED ROUTER</div></div></div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>CURRENT COMPLIANCE&nbsp;</span><span class="muted">&nbsp;LIVE READBACK</span></div>
+      <div id="m-compliance" class="rows">—</div>
+    </section>
+
+    <section class="section">
+      <div class="section-label"><span>HISTORY&nbsp;</span><span class="muted">&nbsp;SECONDARY</span></div>
+      <div id="m-history" class="rows">—</div>
+    </section>
+  </main>
+  <script type="module" src="/js/mandate.js"></script>
+</body>
+</html>

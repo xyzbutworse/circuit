@@ -1,0 +1,18 @@
+{
+  "network": { "name": "X Layer Testnet", "chainId": 1952, "rpc": "https://testrpc.xlayer.tech/terigon", "explorerBase": "https://www.okx.com/web3/explorer/xlayer-test" },
+  "portfolioId": "portfolio-alpha-01",
+  "deployer": "0xB2F3c78c66B50589c7dD8bC2A937994d3F24eE21",
+  "contracts": {
+    "registry": "0x6E8d0a0C740A2Bb1D8D271D02919a0f7c4f8356b",
+    "guard": "0x362F8a4ce4D7f3b3254bF8a432631F0A956320a4",
+    "vault": "0x86d66F4F892bcd91850703f4Ed9F140d1652358A",
+    "adapter": "0x1d9627396cFd9CfD19A0AB03eFd61e6A5A17B10F"
+  },
+  "setupTxs": {
+    "setPublisher": "0xb43e525c7770383c96e87cb35175dbb01578fbc74af7cc29d8541c9b16d4c4aa",
+    "setAdapter": "0x2196425880a6dbad48a2032fa882c5c22f801985b1c926795fbb46bf8818430c",
+    "mandatePublished": "0x9d2d342c03e15c49ab41f5fd5c0ce88c0dc5d1f8d30d3fd1bf389da1969e396b",
+    "portfolioSeeded": "0xbaf1ff96595f00a9cf742841c0bfffa5b640710c46ddb3fbaf01f197a8960810"
+  },
+  "executionNote": "OKX DEX aggregator lists exactly one token on chainId 1952 (native TESTNET_OKB) and returns code 51001 for any pair — no swap route exists on X Layer Testnet today. The vault refuses execution with UnsupportedRoute until a supported pair/venue exists; the architecture is venue-ready."
+}

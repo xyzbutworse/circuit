@@ -1,0 +1,16 @@
+{
+  "name": "circuit-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Thin MCP interface over the Circuit mandate runtime, portfolio vault and X Layer execution path. No Circuit business logic lives here.",
+  "bin": {
+    "circuit-mcp": "bin/circuit-mcp.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  }
+}

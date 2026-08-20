@@ -1,0 +1,9 @@
+node_modules/
+.env
+dist/
+contracts/out/
+contracts/cache/
+.DS_Store
+.data/
+.codex/
+--full-page

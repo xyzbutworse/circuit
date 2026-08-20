@@ -1,0 +1,316 @@
+{
+  "generatedAt": "2026-08-20T17:48:32.927Z",
+  "engine": "circuit-rwa-evaluate-v1",
+  "benchmarkVersion": "0.7.0",
+  "suite": {
+    "nodeTests": 123,
+    "forgeTests": 115
+  },
+  "development": {
+    "total": 29,
+    "passed": 29,
+    "failed": 0,
+    "cases": [
+      {
+        "id": "clean-valid-small",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      },
+      {
+        "id": "clean-valid-large",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      },
+      {
+        "id": "clean-after-exposure-falls",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      },
+      {
+        "id": "clean-same-asset-alpha",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      },
+      {
+        "id": "viol-debtor-concentration",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "DEBTOR_CONCENTRATION_LIMIT"
+        ]
+      },
+      {
+        "id": "viol-issuer-concentration",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "ISSUER_CONCENTRATION_LIMIT"
+        ]
+      },
+      {
+        "id": "viol-jurisdiction-excluded",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "JURISDICTION_EXCLUDED"
+        ]
+      },
+      {
+        "id": "viol-yield-below-min",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "YIELD_BELOW_MINIMUM"
+        ]
+      },
+      {
+        "id": "viol-maturity-above-max",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "MATURITY_EXCEEDED"
+        ]
+      },
+      {
+        "id": "viol-allocation-size",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "ALLOCATION_SIZE_LIMIT"
+        ]
+      },
+      {
+        "id": "viol-liquidity-below",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "LIQUIDITY_BELOW_THRESHOLD"
+        ]
+      },
+      {
+        "id": "viol-risk-above",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "RISK_ABOVE_THRESHOLD"
+        ]
+      },
+      {
+        "id": "viol-unverified",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "ASSET_NOT_VERIFIED"
+        ]
+      },
+      {
+        "id": "viol-disputed",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "ASSET_DISPUTED"
+        ]
+      },
+      {
+        "id": "viol-stale-evidence",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "EVIDENCE_STALE"
+        ]
+      },
+      {
+        "id": "viol-beta-yield-and-maturity",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "YIELD_BELOW_MINIMUM",
+          "MATURITY_EXCEEDED"
+        ]
+      },
+      {
+        "id": "dyn-dispute-after-approval",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "asset state changed since approval"
+        ]
+      },
+      {
+        "id": "dyn-evidence-stale-after-approval",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "asset state changed since approval"
+        ]
+      },
+      {
+        "id": "dyn-portfolio-change-after-approval",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "portfolio state changed since approval"
+        ]
+      },
+      {
+        "id": "dyn-mandate-change-after-approval",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "mandate changed since approval"
+        ]
+      },
+      {
+        "id": "dyn-allocation-change-after-approval",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "allocation changed since approval"
+        ]
+      },
+      {
+        "id": "dyn-approval-replayed",
+        "expected": "REPLAY_REJECT",
+        "outcome": "REPLAY_REJECT",
+        "notes": [
+          "duplicate execution blocked"
+        ]
+      },
+      {
+        "id": "dyn-expired-approval",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "approval expired"
+        ]
+      },
+      {
+        "id": "dyn-wrong-fund",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "allocation changed since approval"
+        ]
+      },
+      {
+        "id": "dyn-wrong-chain",
+        "expected": "STALE",
+        "outcome": "STALE",
+        "notes": [
+          "allocation changed since approval"
+        ]
+      },
+      {
+        "id": "int-tampered-receipt",
+        "expected": "RECEIPT_INVALID",
+        "outcome": "RECEIPT_INVALID",
+        "notes": [
+          "receipt hash mismatch (expected sha256:3f7d9c4ccc402e1e1…, found sha256:9855bcd185813de8b…)"
+        ]
+      },
+      {
+        "id": "int-altered-amount",
+        "expected": "RECEIPT_INVALID",
+        "outcome": "RECEIPT_INVALID",
+        "notes": []
+      },
+      {
+        "id": "int-altered-tx",
+        "expected": "RECEIPT_INVALID",
+        "outcome": "RECEIPT_INVALID",
+        "notes": []
+      },
+      {
+        "id": "int-valid-receipt",
+        "expected": "RECEIPT_VALID",
+        "outcome": "RECEIPT_VALID",
+        "notes": []
+      }
+    ]
+  },
+  "holdout": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "cases": [
+      {
+        "id": "hold-combined-stale-and-concentration",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "EVIDENCE_STALE",
+          "DEBTOR_CONCENTRATION_LIMIT"
+        ]
+      },
+      {
+        "id": "hold-mandate-changed-smaller",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      },
+      {
+        "id": "hold-same-debtor-different-issuer",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "DEBTOR_CONCENTRATION_LIMIT"
+        ]
+      },
+      {
+        "id": "hold-concurrent-portfolio-change",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "DEBTOR_CONCENTRATION_LIMIT"
+        ]
+      },
+      {
+        "id": "hold-verified-but-disputed",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "ASSET_DISPUTED"
+        ]
+      },
+      {
+        "id": "hold-exact-threshold",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      },
+      {
+        "id": "hold-just-over-threshold",
+        "expected": "BLOCK",
+        "outcome": "BLOCK",
+        "notes": [
+          "DEBTOR_CONCENTRATION_LIMIT"
+        ]
+      },
+      {
+        "id": "hold-rounding-boundary",
+        "expected": "ALLOW",
+        "outcome": "ALLOW",
+        "notes": []
+      }
+    ]
+  },
+  "outcomes": {
+    "allow": 7,
+    "block": 17,
+    "stale": 8,
+    "replayReject": 1,
+    "invalidApproval": 0,
+    "receiptValid": 1,
+    "receiptInvalid": 3,
+    "duplicateExecutions": 1
+  },
+  "latency": {
+    "medianMs": 0.002957999999999572,
+    "p95Ms": 0.004040999999997297,
+    "samples": 500
+  }
+}

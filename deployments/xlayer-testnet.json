@@ -1,0 +1,49 @@
+{
+  "network": {
+    "name": "X Layer Testnet",
+    "chainId": 1952,
+    "rpc": "https://testrpc.xlayer.tech/terigon",
+    "explorerBase": "https://www.okx.com/web3/explorer/xlayer-test"
+  },
+  "deployer": "0xB2F3c78c66B50589c7dD8bC2A937994d3F24eE21",
+  "contracts": {
+    "registry": {
+      "name": "CircuitMandateRegistry",
+      "address": "0x4FE654814808d4DeB73D77e30815c2f23b969B9b",
+      "creationTxHash": "0x6bc6865dd5f8e6c71d0256af5fc844e1e74965dcdf23593f522114479566ac5d",
+      "deployedAtBlock": 38290806,
+      "runtimeBytecodeKeccak": "88d1101069e3482498eaa6fe57df05599618e14c4731a1786dc9002466241264"
+    },
+    "guard": {
+      "name": "CircuitPortfolioGuard",
+      "address": "0x41992657dAd81F89e61A29887b9bdd1F7cE9Ff77",
+      "creationTxHash": "0x1ae3f93e8524e8a6246619a4bdd544b3b27343bf7c2980627529513cf1432ce7",
+      "deployedAtBlock": 38290818,
+      "runtimeBytecodeKeccak": "8e25660831782cf4cbce2e588bcc798ef0ed6000ad05c264ed203b5f5e6ee20c"
+    }
+  },
+  "proof": {
+    "mandateTxHash": "0x22da2246e733dcc0f09be905442850275b460f6012dde6cb6593154ce404831c",
+    "blockedTradeTxHash": "0x0afbbb5c5663bb5ac61673929d5fdb0e0c8fc893eb756fc9527e7ac9df35081b",
+    "blockedRevertReason": "ExecutionDenied(uint8):7 (REASON_ISSUER_EXPOSURE) — Tesla issuer exposure would become 40% of NAV vs 35% limit",
+    "authorizedTradeTxHash": "0x5549e8cc24701fc28e6de10f3ac7d6ce0da56b0152bbd8ea573a95ba57b2f16f",
+    "authorizationHash": "0x07f05fe2285e8e78fd57f8215be1d29b83faabc0b401452587627b57bbe1723f",
+    "completedAt": "2026-08-14T23:25:01.915Z",
+    "sequence": {
+      "seedTxHash": "0x22c04c2e6867fd94f01a7e7823156ddda4868967c0945086f96f62ccd31ad50c",
+      "googlxTradeTxHash": "0x1c9bc09468ebbeac3f0e847463e14c60f42cf2c81bfb553ac4bf0bce52422944",
+      "mstrxTradeTxHash": "0xbc01ebb207f28da24e39f61899515d45f93ba91873882375b9abb5d56c9687c1",
+      "finalBlock": 38291052,
+      "finalState": {
+        "sectorTechUsd": "5000",
+        "investedUsd": "8000",
+        "cashUsd": "2000",
+        "dailyTurnoverUsd": "5000"
+      }
+    }
+  },
+  "build": {
+    "forgeVersion": "1.7.1",
+    "solc": "0.8.26"
+  }
+}
