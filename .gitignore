@@ -7,3 +7,4 @@ contracts/cache/
 .data/
 .codex/
 --full-page
+.vercel

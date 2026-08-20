@@ -1,6 +1,6 @@
 import http from "node:http";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
-import { extname, join, normalize } from "node:path";
+import { extname, join, normalize, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { evaluatePlan, feedbackLines } from "./dist/competition/mandate.js";
 import { makeCircuitReceipt } from "./dist/competition/receipt.js";
@@ -449,4 +449,10 @@ const server=http.createServer(async(req,res)=>{try{
   if(!file.startsWith(root)){if(!res.headersSent)res.writeHead(403);return res.end("Forbidden");}
   try{const info=await stat(file);if(!info.isFile())throw new Error("not-file");const content=await readFile(file);res.writeHead(200,{"content-type":mime[extname(file)]??"application/octet-stream"});return res.end(content);}catch{const content=await readFile(join(root,"index.html"));res.writeHead(200,{"content-type":"text/html; charset=utf-8"});return res.end(content);}
 }catch(error){sendJson(res,500,{error:error instanceof Error?error.message:"Unknown server error"});}});
-server.listen(port,"127.0.0.1",()=>console.log(`CIRCUIT → http://127.0.0.1:${port}`));
+
+const isDirectRun = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isDirectRun) {
+  server.listen(port,"127.0.0.1",()=>console.log(`CIRCUIT → http://127.0.0.1:${port}`));
+}
+
+export default server;
